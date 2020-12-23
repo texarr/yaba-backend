@@ -26,8 +26,8 @@ export class AuthService {
     }
 
     const user = new UserEntity();
-    user.setPassword(newUser.password);
     plainToClassFromExist(user, { ...newUser });
+    user.setPassword(newUser.password);
 
     const savedUser = await this.userRepository.save(user);
     if (savedUser) {
@@ -36,7 +36,7 @@ export class AuthService {
         email: user.email,
         confirmationToken: user.confirmationToken,
       };
-      // await this.sendConfirmationEmail(user.email, user.confirmationToken);
+      
       await this.mailerService.sendAccountConfirmationEmail(
         confirmationEmailDto,
       );
