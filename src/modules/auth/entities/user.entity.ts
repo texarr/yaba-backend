@@ -11,18 +11,30 @@ export class UserEntity {
   name: string;
 
   @Column({
-    unique: true
+    unique: true,
   })
   email: string;
 
-  @Column({select: false})
+  @Column({ select: false })
   password: string;
+
+  @Column()
+  emailConfirmed: boolean;
+
+  @Column()
+  confirmationToken: string;
 
   constructor() {
     this.id = uuid4();
+    this.emailConfirmed = false;
+    this.confirmationToken = uuid4();
   }
 
   setPassword(password: string) {
     this.password = bcrypt.hashSync(password, 10);
+  }
+
+  confirmEmail() {
+    this.emailConfirmed = true;
   }
 }

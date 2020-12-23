@@ -1,7 +1,7 @@
 import { ApiModelProperty } from '@nestjs/swagger/dist/decorators/api-model-property.decorator';
 import { IsEmail, IsNotEmpty } from 'class-validator';
 
-export class RegisetrUserDTO {
+export class RegisterUserDto {
   @ApiModelProperty()
   id: string;
 
@@ -16,4 +16,10 @@ export class RegisetrUserDTO {
   @ApiModelProperty()
   @IsNotEmpty()
   password: string;
+
+  @ApiModelProperty()
+  emailConfirmed: boolean;
+
+  @ApiModelProperty()
+  confirmationToken: string;
 }

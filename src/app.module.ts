@@ -5,16 +5,18 @@ import { AuthModule } from './modules/auth/auth.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmConfigService } from './type-orm-config.service';
 import { ConfigModule } from '@nestjs/config';
+import { MailerModule } from './modules/mailer/mailer.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: '.env'
+      envFilePath: '.env',
     }),
     TypeOrmModule.forRootAsync({
       useClass: TypeOrmConfigService,
     }),
-    AuthModule
+    AuthModule,
+    MailerModule,
   ],
   controllers: [AppController],
   providers: [AppService],
