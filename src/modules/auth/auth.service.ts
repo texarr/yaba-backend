@@ -8,6 +8,15 @@ import { Repository } from 'typeorm';
 import { MailerService } from '../mailer/mailer.service';
 import { ConfirmationEmailDto } from '../mailer/dto/confirmation-email.dto';
 import { RegisteredUserDto } from './dto/registered-user.dto';
+import { LoginUserDto } from './dto/login-user.dto';
+import { JwtResponseInterface } from './interfaces/jwt-response.interface';
+import { EmailNotFoundException } from './exceptions/email-not-found.exception';
+import * as bcrypt from 'bcryptjs';
+import { IncorrectPasswordException } from './exceptions/incorrect-password.exception';
+import { JwtPayloadInterface } from './interfaces/jwt-payload.interface';
+import { JwtService } from '@nestjs/jwt';
+import { EmailNotConfirmedException } from './exceptions/email-not-confirmed.exception';
+import { PasswordRequiredException } from './exceptions/password-required.exception';
 
 @Injectable()
 export class AuthService {
@@ -15,6 +24,7 @@ export class AuthService {
     @InjectRepository(UserEntity)
     private readonly userRepository: Repository<UserEntity>,
     private mailerService: MailerService,
+    private readonly jwtService: JwtService,
   ) {}
 
   async registerUser(newUser: UserInterface): Promise<UserInterface> {
@@ -27,21 +37,27 @@ export class AuthService {
 
     const user = new UserEntity();
     plainToClassFromExist(user, { ...newUser });
+
+    if (!newUser.password) {
+      throw new PasswordRequiredException();
+    }
+
     user.setPassword(newUser.password);
 
-    const savedUser = await this.userRepository.save(user);
+    const savedUser: UserInterface = await this.userRepository.save(user);
     if (savedUser) {
       const confirmationEmailDto: ConfirmationEmailDto = {
         name: user.name,
         email: user.email,
         confirmationToken: user.confirmationToken,
       };
-      
+
       await this.mailerService.sendAccountConfirmationEmail(
         confirmationEmailDto,
       );
     }
 
+    delete savedUser.password;
     return savedUser;
   }
 
@@ -59,13 +75,65 @@ export class AuthService {
       existingAccount.emailConfirmed = true;
       await this.userRepository.save(existingAccount);
 
-      const regesterdUserDto: RegisteredUserDto = new RegisteredUserDto(
-        existingAccount,
-      );
-
-      return regesterdUserDto;
+      return new RegisteredUserDto(existingAccount);
     }
 
     return null;
+  }
+
+  async loginUser(loginUserDto: LoginUserDto): Promise<JwtResponseInterface> {
+    const user = await this.userRepository.findOne(
+      { email: loginUserDto.email },
+      {
+        select: [
+          'id',
+          'name',
+          'email',
+          'password',
+          'emailConfirmed',
+          'confirmationToken',
+        ],
+      },
+    );
+
+    if (!user) {
+      throw new EmailNotFoundException();
+    }
+
+    if (!user.emailConfirmed) {
+      throw new EmailNotConfirmedException();
+    }
+
+    return this.handleLogin(user, loginUserDto.password);
+  }
+
+  async handleLogin(
+    user: UserEntity,
+    password: string,
+  ): Promise<JwtResponseInterface> {
+    const passwordCorrect = await bcrypt.compare(password, user.password);
+
+    if (!passwordCorrect) {
+      throw new IncorrectPasswordException();
+    }
+
+    const jwtResponse: JwtResponseInterface = this.createToken({
+      email: user.email,
+      id: user.id,
+    });
+
+    const authorizedUser: UserInterface = user;
+    delete authorizedUser.password;
+
+    jwtResponse.user = authorizedUser;
+    return jwtResponse;
+  }
+
+  createToken(user: JwtPayloadInterface): JwtResponseInterface {
+    const accessToken = this.jwtService.sign(user);
+    return {
+      expiresIn: 3600000,
+      accessToken,
+    };
   }
 }

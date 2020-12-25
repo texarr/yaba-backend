@@ -2487,8 +2487,8 @@
         "affectsGlobalScope": false
       },
       "./src/modules/auth/models/user.interface.ts": {
-        "version": "319d82e3289b6a3ec612023a609e36be91bc3b33946ff21fde679e0b05e3c1f5",
-        "signature": "25eae9dd0c5e60afa48ea747741ee84fbd780a8f9c7f82edba2afca0a095aeeb",
+        "version": "85e53694a72abd8a7558583b799fed32ba056747633912d2d7ab3ea9cb446ac6",
+        "signature": "af5741cf6943ded0aab7c9b626a4f3ab0ba2fc73bfbe3a1b2b0ce145497438aa",
         "affectsGlobalScope": false
       },
       "./src/modules/auth/exceptions/emailtaken.exception.ts": {
@@ -2542,8 +2542,8 @@
         "affectsGlobalScope": false
       },
       "./src/modules/auth/entities/user.entity.ts": {
-        "version": "604c2ba6f889b825370b2f22f52a608150c2b4ba6818b8a5a646627fccffa7c0",
-        "signature": "a2aa5c0d256b3fa415cb73dbee7db658c9b68359753d18e11e8a36494b5be331",
+        "version": "153e7554366c9299cfd07cebc106337d39fe4ce09094d11f5d72ca95475c93fd",
+        "signature": "c9949605b2e9660437da3880942f1d38d890bde3c1279577eb95870141a2a851",
         "affectsGlobalScope": false
       },
       "./node_modules/@nestjs/typeorm/dist/interfaces/entity-class-or-schema.type.d.ts": {
@@ -3541,19 +3541,84 @@
         "signature": "b923bafce31ba28c956485071e07bec29f5286138418f9768cc6a7bb1684b9d8",
         "affectsGlobalScope": false
       },
-      "./src/modules/auth/dto/register-user.dto.ts": {
-        "version": "1c568ec4694e4a489d2ab107003b463940c5fc62b604078d193e7a8113416120",
-        "signature": "fb25e6384396ded66e49f9a3666751c3d09c1eda4296a2f6bdaf111704e07597",
+      "./src/modules/auth/dto/registered-user.dto.ts": {
+        "version": "baaaff4d877113e7ccd3ea3d57c51238d8c79faf8af2ea2494635349067f388f",
+        "signature": "df841d2462f84c31b9db553e479b367bd012d07813b78f9664c7c216d77505d8",
         "affectsGlobalScope": false
       },
-      "./src/modules/auth/dto/registered-user.dto.ts": {
-        "version": "608bca577c4f3a49592aac28dd2a6d9efdc2abc5395c49b27ea7730068084c11",
-        "signature": "69f2f7d1b94ec44cc9e1b46472b25f7e73c431f3f4ec5c7d0e5b8c84c651dc5f",
+      "./src/modules/auth/dto/login-user.dto.ts": {
+        "version": "e040d5656279484f57251df11cf5818ebc9f2757bb65cd4278ba721f362d1352",
+        "signature": "d8bc4bb1baf80730e804bb0f3676c434257a8e593cebc2f7b04f08673e0dc643",
+        "affectsGlobalScope": false
+      },
+      "./src/modules/auth/interfaces/jwt-response.interface.ts": {
+        "version": "a17924f7b2fa6b2ed0e51920add86d8e8ee1b1e5d8484ffc1990e186508a1e6a",
+        "signature": "280b5ce182e9e2f310242ae22fc624bfe4f239b2ac2347723d3b0f154161de66",
+        "affectsGlobalScope": false
+      },
+      "./src/modules/auth/exceptions/email-not-found.exception.ts": {
+        "version": "da9052491e40c14d20d8646009f47d3de69af51968d777adfceecfb53f7aa340",
+        "signature": "3d3c11c98ced17440b42b101226b30f42c4b79f678ed5d98ec0c783911b42fef",
+        "affectsGlobalScope": false
+      },
+      "./src/modules/auth/exceptions/incorrect-password.exception.ts": {
+        "version": "0575dc01527fdb4ee7add26e2f59a9f5866d3bdf12b87cdd5a54a251facca19e",
+        "signature": "dd48e790651a0b068d7b11aab8fbafb3d8e5aaa1cd0f4c6376f7da9be3e663fa",
+        "affectsGlobalScope": false
+      },
+      "./src/modules/auth/interfaces/jwt-payload.interface.ts": {
+        "version": "541693af6d6b115de26bed45f17e54f0e6bffe0a6a951c7c2cc65d6c764a01f3",
+        "signature": "136960703356e2fea769a7c3b1105c340171b9656ee950795df0fd9dd78cf481",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@types/jsonwebtoken/index.d.ts": {
+        "version": "f67c920eba6ab8e4558cb9ab661d900188f101c5657e19b1e15829a1d491d46e",
+        "signature": "f67c920eba6ab8e4558cb9ab661d900188f101c5657e19b1e15829a1d491d46e",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts": {
+        "version": "fc0140cf41d169b3b77e09831c9d2eed1cdb131aa34f4fa27e4c01896ec97ad6",
+        "signature": "fc0140cf41d169b3b77e09831c9d2eed1cdb131aa34f4fa27e4c01896ec97ad6",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@nestjs/jwt/dist/interfaces/index.d.ts": {
+        "version": "7c14e702387296711c1a829bc95052ff02f533d4aa27d53cc0186c795094a3a9",
+        "signature": "7c14e702387296711c1a829bc95052ff02f533d4aa27d53cc0186c795094a3a9",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@nestjs/jwt/dist/jwt.module.d.ts": {
+        "version": "579f8828da42ae02db6915a0223d23b0da07157ff484fecdbf8a96fffa0fa4df",
+        "signature": "579f8828da42ae02db6915a0223d23b0da07157ff484fecdbf8a96fffa0fa4df",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@nestjs/jwt/dist/jwt.service.d.ts": {
+        "version": "d1e16a1778a336ae49607ca0becd8688e74a020bea949047dcfcbb1bd2dc0f5a",
+        "signature": "d1e16a1778a336ae49607ca0becd8688e74a020bea949047dcfcbb1bd2dc0f5a",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@nestjs/jwt/dist/index.d.ts": {
+        "version": "a13aac535101a942283e3d00bce50f483bfa9bed6e1f8dfda33a3bb072498776",
+        "signature": "a13aac535101a942283e3d00bce50f483bfa9bed6e1f8dfda33a3bb072498776",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@nestjs/jwt/index.d.ts": {
+        "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
+        "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
+        "affectsGlobalScope": false
+      },
+      "./src/modules/auth/exceptions/email-not-confirmed.exception.ts": {
+        "version": "9aa2da9a08b57c8662d3f1da048955bc4d70481699f8d72b939d2964bbe95625",
+        "signature": "9e46207796f54f1707d071121c9f603192a4d63d96c290ea67886fc30d38d77f",
+        "affectsGlobalScope": false
+      },
+      "./src/modules/auth/exceptions/password-required.exception.ts": {
+        "version": "62bade08323508999cef0f996138d20308d0fc8db792fd047fa0a71857fc2dc4",
+        "signature": "9f1084d4a3b5096be342abe0e03cf05ed8b209d7cbabe4be0288df979e4773e9",
         "affectsGlobalScope": false
       },
       "./src/modules/auth/auth.service.ts": {
-        "version": "23b65f1f033871dda7f94bff3efe0cb29e039943fc2147668f7c2e9be5fff23e",
-        "signature": "d1fb1d862c741b580dacec87fb99933b784561d3d341cb550436cb0d078dd11d",
+        "version": "130ad3d3b483442480179e163dce60344f82d4cf2c47ee1f29155271d9dbe1fc",
+        "signature": "ea633526c07f440e02edcc3a6676b8eb5150f741473d1c372c8cb895a3b98a4d",
         "affectsGlobalScope": false
       },
       "./node_modules/@nestjs/swagger/dist/decorators/api-basic.decorator.d.ts": {
@@ -3731,13 +3796,18 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
       },
+      "./src/modules/auth/dto/register-user.dto.ts": {
+        "version": "1c568ec4694e4a489d2ab107003b463940c5fc62b604078d193e7a8113416120",
+        "signature": "fb25e6384396ded66e49f9a3666751c3d09c1eda4296a2f6bdaf111704e07597",
+        "affectsGlobalScope": false
+      },
       "./src/modules/auth/auth.controller.ts": {
-        "version": "e71fc44488fa430a545e04dd48b49c34e4ad05ce443779f7de54a253faa85812",
-        "signature": "ca6bad37cc604661b49fc593e7a99a1d56084051a57980cceefe42000fab2171",
+        "version": "eec6baf32d3245c18d2cf1cee689e0cdda85f9513564bef04e298d701d7ef955",
+        "signature": "2e13be7f99fc53b741c13cf13d6924286ad4b76fa29dc50c5bc5c193c0e54af6",
         "affectsGlobalScope": false
       },
       "./src/modules/auth/auth.module.ts": {
-        "version": "a0a386e4a6dbaa75d138be7b359cf15de0c266747e50250d3739cb05b57245e2",
+        "version": "d1cdaa56af7d216019ca5c5a4b34d5eb89f64b550c33d50b5bac6da17f3f0d45",
         "signature": "2e5d258cf85349b02b015c3f1b8873c152d182c3819a7ccc3aff16fc3037a5fc",
         "affectsGlobalScope": false
       },
@@ -4189,6 +4259,21 @@
       "./node_modules/@types/parse-json/index.d.ts": {
         "version": "2b8264b2fefd7367e0f20e2c04eed5d3038831fe00f5efbc110ff0131aab899b",
         "signature": "2b8264b2fefd7367e0f20e2c04eed5d3038831fe00f5efbc110ff0131aab899b",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@types/passport/index.d.ts": {
+        "version": "f640cdd17b26d4ecaf98f17d90e012b25a29676e30149ef26f02572159cb325a",
+        "signature": "f640cdd17b26d4ecaf98f17d90e012b25a29676e30149ef26f02572159cb325a",
+        "affectsGlobalScope": true
+      },
+      "./node_modules/@types/passport-strategy/index.d.ts": {
+        "version": "29d59e921bc723594bbfc98230d24f38f0d5a669f28fcf989b7468f4f95b7c52",
+        "signature": "29d59e921bc723594bbfc98230d24f38f0d5a669f28fcf989b7468f4f95b7c52",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@types/passport-jwt/index.d.ts": {
+        "version": "d306be26f96b4bd9b279cd7da9d1355d5ce4060a2bb254489c1b95c87057eb38",
+        "signature": "d306be26f96b4bd9b279cd7da9d1355d5ce4060a2bb254489c1b95c87057eb38",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/prettier/index.d.ts": {
@@ -5009,6 +5094,31 @@
       "./node_modules/@nestjs/core/services/reflector.service.d.ts": [
         "./node_modules/@nestjs/common/index.d.ts"
       ],
+      "./node_modules/@nestjs/jwt/dist/index.d.ts": [
+        "./node_modules/@nestjs/jwt/dist/interfaces/index.d.ts",
+        "./node_modules/@nestjs/jwt/dist/jwt.module.d.ts",
+        "./node_modules/@nestjs/jwt/dist/jwt.service.d.ts"
+      ],
+      "./node_modules/@nestjs/jwt/dist/interfaces/index.d.ts": [
+        "./node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts"
+      ],
+      "./node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts": [
+        "./node_modules/@nestjs/common/interfaces/index.d.ts",
+        "./node_modules/@types/jsonwebtoken/index.d.ts",
+        "./node_modules/@types/node/index.d.ts"
+      ],
+      "./node_modules/@nestjs/jwt/dist/jwt.module.d.ts": [
+        "./node_modules/@nestjs/common/index.d.ts",
+        "./node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts"
+      ],
+      "./node_modules/@nestjs/jwt/dist/jwt.service.d.ts": [
+        "./node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts",
+        "./node_modules/@types/jsonwebtoken/index.d.ts",
+        "./node_modules/@types/node/index.d.ts"
+      ],
+      "./node_modules/@nestjs/jwt/index.d.ts": [
+        "./node_modules/@nestjs/jwt/dist/index.d.ts"
+      ],
       "./node_modules/@nestjs/swagger/dist/decorators/api-body.decorator.d.ts": [
         "./node_modules/@nestjs/common/index.d.ts",
         "./node_modules/@nestjs/swagger/dist/interfaces/open-api-spec.interface.d.ts",
@@ -5212,6 +5322,9 @@
       "./node_modules/@types/jest/index.d.ts": [
         "./node_modules/jest-diff/build/index.d.ts",
         "./node_modules/pretty-format/build/index.d.ts"
+      ],
+      "./node_modules/@types/jsonwebtoken/index.d.ts": [
+        "./node_modules/@types/node/index.d.ts"
       ],
       "./node_modules/@types/node/base.d.ts": [
         "./node_modules/@types/node/assert.d.ts",
@@ -5499,6 +5612,19 @@
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/node/stream.d.ts",
         "./node_modules/@types/nodemailer/lib/shared.d.ts"
+      ],
+      "./node_modules/@types/passport-jwt/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/jsonwebtoken/index.d.ts",
+        "./node_modules/@types/passport-strategy/index.d.ts"
+      ],
+      "./node_modules/@types/passport-strategy/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/passport/index.d.ts"
+      ],
+      "./node_modules/@types/passport/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/node/http.d.ts"
       ],
       "./node_modules/@types/serve-static/index.d.ts": [
         "./node_modules/@types/mime/index.d.ts",
@@ -7534,12 +7660,15 @@
         "./node_modules/@nestjs/common/index.d.ts",
         "./node_modules/@nestjs/swagger/index.d.ts",
         "./src/modules/auth/auth.service.ts",
+        "./src/modules/auth/dto/login-user.dto.ts",
         "./src/modules/auth/dto/register-user.dto.ts",
         "./src/modules/auth/dto/registered-user.dto.ts",
+        "./src/modules/auth/interfaces/jwt-response.interface.ts",
         "./src/modules/auth/models/user.interface.ts"
       ],
       "./src/modules/auth/auth.module.ts": [
         "./node_modules/@nestjs/common/index.d.ts",
+        "./node_modules/@nestjs/jwt/index.d.ts",
         "./node_modules/@nestjs/typeorm/index.d.ts",
         "./src/modules/auth/auth.controller.ts",
         "./src/modules/auth/auth.service.ts",
@@ -7548,15 +7677,28 @@
       ],
       "./src/modules/auth/auth.service.ts": [
         "./node_modules/@nestjs/common/index.d.ts",
+        "./node_modules/@nestjs/jwt/index.d.ts",
         "./node_modules/@nestjs/typeorm/index.d.ts",
+        "./node_modules/@types/bcryptjs/index.d.ts",
         "./node_modules/class-transformer/index.d.ts",
         "./node_modules/typeorm/index.d.ts",
+        "./src/modules/auth/dto/login-user.dto.ts",
         "./src/modules/auth/dto/registered-user.dto.ts",
         "./src/modules/auth/entities/user.entity.ts",
+        "./src/modules/auth/exceptions/email-not-confirmed.exception.ts",
+        "./src/modules/auth/exceptions/email-not-found.exception.ts",
         "./src/modules/auth/exceptions/emailtaken.exception.ts",
+        "./src/modules/auth/exceptions/incorrect-password.exception.ts",
+        "./src/modules/auth/exceptions/password-required.exception.ts",
+        "./src/modules/auth/interfaces/jwt-payload.interface.ts",
+        "./src/modules/auth/interfaces/jwt-response.interface.ts",
         "./src/modules/auth/models/user.interface.ts",
         "./src/modules/mailer/dto/confirmation-email.dto.ts",
         "./src/modules/mailer/mailer.service.ts"
+      ],
+      "./src/modules/auth/dto/login-user.dto.ts": [
+        "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts",
+        "./node_modules/class-validator/types/index.d.ts"
       ],
       "./src/modules/auth/dto/register-user.dto.ts": [
         "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts",
@@ -7565,15 +7707,30 @@
       "./src/modules/auth/dto/registered-user.dto.ts": [
         "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts",
         "./node_modules/class-validator/types/index.d.ts",
-        "./src/modules/auth/dto/register-user.dto.ts"
+        "./src/modules/auth/entities/user.entity.ts"
       ],
       "./src/modules/auth/entities/user.entity.ts": [
         "./node_modules/@types/bcryptjs/index.d.ts",
         "./node_modules/@types/uuid/index.d.ts",
         "./node_modules/typeorm/index.d.ts"
       ],
+      "./src/modules/auth/exceptions/email-not-confirmed.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
+      ],
+      "./src/modules/auth/exceptions/email-not-found.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
+      ],
       "./src/modules/auth/exceptions/emailtaken.exception.ts": [
         "./node_modules/@nestjs/common/index.d.ts"
+      ],
+      "./src/modules/auth/exceptions/incorrect-password.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
+      ],
+      "./src/modules/auth/exceptions/password-required.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
+      ],
+      "./src/modules/auth/interfaces/jwt-response.interface.ts": [
+        "./src/modules/auth/models/user.interface.ts"
       ],
       "./src/modules/mailer/dto/confirmation-email.dto.ts": [
         "./node_modules/class-validator/types/index.d.ts"
@@ -8278,6 +8435,31 @@
       "./node_modules/@nestjs/core/services/reflector.service.d.ts": [
         "./node_modules/@nestjs/common/index.d.ts"
       ],
+      "./node_modules/@nestjs/jwt/dist/index.d.ts": [
+        "./node_modules/@nestjs/jwt/dist/interfaces/index.d.ts",
+        "./node_modules/@nestjs/jwt/dist/jwt.module.d.ts",
+        "./node_modules/@nestjs/jwt/dist/jwt.service.d.ts"
+      ],
+      "./node_modules/@nestjs/jwt/dist/interfaces/index.d.ts": [
+        "./node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts"
+      ],
+      "./node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts": [
+        "./node_modules/@nestjs/common/interfaces/index.d.ts",
+        "./node_modules/@types/jsonwebtoken/index.d.ts",
+        "./node_modules/@types/node/index.d.ts"
+      ],
+      "./node_modules/@nestjs/jwt/dist/jwt.module.d.ts": [
+        "./node_modules/@nestjs/common/index.d.ts",
+        "./node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts"
+      ],
+      "./node_modules/@nestjs/jwt/dist/jwt.service.d.ts": [
+        "./node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts",
+        "./node_modules/@types/jsonwebtoken/index.d.ts",
+        "./node_modules/@types/node/index.d.ts"
+      ],
+      "./node_modules/@nestjs/jwt/index.d.ts": [
+        "./node_modules/@nestjs/jwt/dist/index.d.ts"
+      ],
       "./node_modules/@nestjs/swagger/dist/decorators/api-body.decorator.d.ts": [
         "./node_modules/@nestjs/common/index.d.ts",
         "./node_modules/@nestjs/swagger/dist/interfaces/open-api-spec.interface.d.ts",
@@ -8481,6 +8663,9 @@
       "./node_modules/@types/jest/index.d.ts": [
         "./node_modules/jest-diff/build/index.d.ts",
         "./node_modules/pretty-format/build/index.d.ts"
+      ],
+      "./node_modules/@types/jsonwebtoken/index.d.ts": [
+        "./node_modules/@types/node/index.d.ts"
       ],
       "./node_modules/@types/node/base.d.ts": [
         "./node_modules/@types/node/assert.d.ts",
@@ -8768,6 +8953,19 @@
         "./node_modules/@types/node/index.d.ts",
         "./node_modules/@types/node/stream.d.ts",
         "./node_modules/@types/nodemailer/lib/shared.d.ts"
+      ],
+      "./node_modules/@types/passport-jwt/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/jsonwebtoken/index.d.ts",
+        "./node_modules/@types/passport-strategy/index.d.ts"
+      ],
+      "./node_modules/@types/passport-strategy/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/passport/index.d.ts"
+      ],
+      "./node_modules/@types/passport/index.d.ts": [
+        "./node_modules/@types/express/index.d.ts",
+        "./node_modules/@types/node/http.d.ts"
       ],
       "./node_modules/@types/serve-static/index.d.ts": [
         "./node_modules/@types/mime/index.d.ts",
@@ -10782,22 +10980,43 @@
       ],
       "./src/modules/auth/auth.controller.ts": [
         "./src/modules/auth/auth.service.ts",
+        "./src/modules/auth/dto/login-user.dto.ts",
         "./src/modules/auth/dto/register-user.dto.ts",
         "./src/modules/auth/dto/registered-user.dto.ts",
+        "./src/modules/auth/interfaces/jwt-response.interface.ts",
         "./src/modules/auth/models/user.interface.ts"
       ],
       "./src/modules/auth/auth.service.ts": [
+        "./node_modules/@nestjs/jwt/index.d.ts",
         "./node_modules/typeorm/index.d.ts",
+        "./src/modules/auth/dto/login-user.dto.ts",
         "./src/modules/auth/dto/registered-user.dto.ts",
         "./src/modules/auth/entities/user.entity.ts",
+        "./src/modules/auth/interfaces/jwt-payload.interface.ts",
+        "./src/modules/auth/interfaces/jwt-response.interface.ts",
         "./src/modules/auth/models/user.interface.ts",
         "./src/modules/mailer/mailer.service.ts"
       ],
       "./src/modules/auth/dto/registered-user.dto.ts": [
-        "./src/modules/auth/dto/register-user.dto.ts"
+        "./src/modules/auth/entities/user.entity.ts"
+      ],
+      "./src/modules/auth/exceptions/email-not-confirmed.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
+      ],
+      "./src/modules/auth/exceptions/email-not-found.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
       ],
       "./src/modules/auth/exceptions/emailtaken.exception.ts": [
         "./node_modules/@nestjs/common/index.d.ts"
+      ],
+      "./src/modules/auth/exceptions/incorrect-password.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
+      ],
+      "./src/modules/auth/exceptions/password-required.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
+      ],
+      "./src/modules/auth/interfaces/jwt-response.interface.ts": [
+        "./src/modules/auth/models/user.interface.ts"
       ],
       "./src/modules/mailer/mailer.controller.ts": [
         "./src/modules/auth/models/user.interface.ts",
@@ -11006,6 +11225,12 @@
       "./node_modules/@nestjs/core/router/request/request-constants.d.ts",
       "./node_modules/@nestjs/core/services/index.d.ts",
       "./node_modules/@nestjs/core/services/reflector.service.d.ts",
+      "./node_modules/@nestjs/jwt/dist/index.d.ts",
+      "./node_modules/@nestjs/jwt/dist/interfaces/index.d.ts",
+      "./node_modules/@nestjs/jwt/dist/interfaces/jwt-module-options.interface.d.ts",
+      "./node_modules/@nestjs/jwt/dist/jwt.module.d.ts",
+      "./node_modules/@nestjs/jwt/dist/jwt.service.d.ts",
+      "./node_modules/@nestjs/jwt/index.d.ts",
       "./node_modules/@nestjs/swagger/dist/decorators/api-basic.decorator.d.ts",
       "./node_modules/@nestjs/swagger/dist/decorators/api-bearer.decorator.d.ts",
       "./node_modules/@nestjs/swagger/dist/decorators/api-body.decorator.d.ts",
@@ -11075,6 +11300,7 @@
       "./node_modules/@types/jest/index.d.ts",
       "./node_modules/@types/json-schema/index.d.ts",
       "./node_modules/@types/json5/index.d.ts",
+      "./node_modules/@types/jsonwebtoken/index.d.ts",
       "./node_modules/@types/mime/index.d.ts",
       "./node_modules/@types/node/assert.d.ts",
       "./node_modules/@types/node/async_hooks.d.ts",
@@ -11139,6 +11365,9 @@
       "./node_modules/@types/nodemailer/lib/xoauth2.d.ts",
       "./node_modules/@types/normalize-package-data/index.d.ts",
       "./node_modules/@types/parse-json/index.d.ts",
+      "./node_modules/@types/passport-jwt/index.d.ts",
+      "./node_modules/@types/passport-strategy/index.d.ts",
+      "./node_modules/@types/passport/index.d.ts",
       "./node_modules/@types/prettier/index.d.ts",
       "./node_modules/@types/qs/index.d.ts",
       "./node_modules/@types/range-parser/index.d.ts",
@@ -11670,10 +11899,17 @@
       "./src/modules/auth/auth.controller.ts",
       "./src/modules/auth/auth.module.ts",
       "./src/modules/auth/auth.service.ts",
+      "./src/modules/auth/dto/login-user.dto.ts",
       "./src/modules/auth/dto/register-user.dto.ts",
       "./src/modules/auth/dto/registered-user.dto.ts",
       "./src/modules/auth/entities/user.entity.ts",
+      "./src/modules/auth/exceptions/email-not-confirmed.exception.ts",
+      "./src/modules/auth/exceptions/email-not-found.exception.ts",
       "./src/modules/auth/exceptions/emailtaken.exception.ts",
+      "./src/modules/auth/exceptions/incorrect-password.exception.ts",
+      "./src/modules/auth/exceptions/password-required.exception.ts",
+      "./src/modules/auth/interfaces/jwt-payload.interface.ts",
+      "./src/modules/auth/interfaces/jwt-response.interface.ts",
       "./src/modules/auth/models/user.interface.ts",
       "./src/modules/mailer/dto/confirmation-email.dto.ts",
       "./src/modules/mailer/dto/user-email.dto.ts",

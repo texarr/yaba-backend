@@ -33,8 +33,4 @@ export class UserEntity {
   setPassword(password: string) {
     this.password = bcrypt.hashSync(password, 10);
   }
-
-  confirmEmail() {
-    this.emailConfirmed = true;
-  }
 }

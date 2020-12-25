@@ -4,6 +4,8 @@ import { ApiResponse } from '@nestjs/swagger';
 import { UserInterface } from './models/user.interface';
 import { RegisterUserDto } from './dto/register-user.dto';
 import { RegisteredUserDto } from './dto/registered-user.dto';
+import { LoginUserDto } from './dto/login-user.dto';
+import { JwtResponseInterface } from './interfaces/jwt-response.interface';
 
 @Controller('auth')
 export class AuthController {
@@ -31,5 +33,17 @@ export class AuthController {
     @Param('confirmationToken') confirmationToken: string,
   ): Promise<RegisteredUserDto | null> {
     return await this.auth.confirmAccount(confirmationToken);
+  }
+
+  @Post('login')
+  @ApiResponse({
+    status: 201,
+    description: 'Logged in successfully',
+    type: JwtResponseInterface,
+  })
+  async loginUser(
+    @Body() loginUserDto: LoginUserDto,
+  ): Promise<JwtResponseInterface> {
+    return await this.auth.loginUser(loginUserDto);
   }
 }

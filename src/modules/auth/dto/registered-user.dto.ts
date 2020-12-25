@@ -1,6 +1,6 @@
 import { ApiModelProperty } from '@nestjs/swagger/dist/decorators/api-model-property.decorator';
 import { IsEmail, IsNotEmpty } from 'class-validator';
-import { RegisterUserDto } from './register-user.dto';
+import { UserEntity } from '../entities/user.entity';
 
 export class RegisteredUserDto {
   @ApiModelProperty()
@@ -17,10 +17,10 @@ export class RegisteredUserDto {
   @ApiModelProperty()
   emailConfirmed: boolean;
 
-  constructor(data: RegisterUserDto) {
+  constructor(data: UserEntity) {
     this.id = data.id;
     this.name = data.name;
     this.email = data.email;
-    this.emailConfirmed = data.emailConfirmed
+    this.emailConfirmed = data.emailConfirmed;
   }
 }
