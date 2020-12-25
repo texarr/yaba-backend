@@ -1457,13 +1457,18 @@
         "affectsGlobalScope": false
       },
       "./migration/1608508429795-userentity.ts": {
-        "version": "5ec34c5176fc84ea6c90f860155db3b4437ee0b64328305e97e86ed47158ee19",
+        "version": "48393b5bf8e56ea9fd947fa4b35472d23d20fbcd8dc4db3f0b7eec91013985e8",
         "signature": "8f131ea0b98fbf7e0e1831a024c7dd95418f05e63558e9a02bb77229a6a0aa4e",
         "affectsGlobalScope": false
       },
       "./migration/1608675714637-userentity.ts": {
-        "version": "1dc1a484564ca6193aa9a507b4fd01b6c50577bdb735371b290e9196d0efb5d0",
+        "version": "82394ac7210d5218c243cca5617fea38e15ff18593adee24e4d94fe927112d89",
         "signature": "928dbbe00707b9c3f3373416dcdeef38010b2d9e2b0bccb9b118d3c5345adf26",
+        "affectsGlobalScope": false
+      },
+      "./migration/1608901647308-userentity.ts": {
+        "version": "ee5ac5b5bea960ecbecd80c8adb4a0d3741576132776d38fa8b8e973780d7622",
+        "signature": "abcc536bd0bfa040efa62f1219743daf9d3e0f2565095fd90b1c4a145c295d00",
         "affectsGlobalScope": false
       },
       "./node_modules/@nestjs/common/cache/cache.constants.d.ts": {
@@ -3516,16 +3521,6 @@
         "signature": "4b6dcb51efd33ea0263a0e24539d9b6f13359b9c15aa389449b3f981177be5db",
         "affectsGlobalScope": false
       },
-      "./src/modules/mailer/dto/user-email.dto.ts": {
-        "version": "b990010f610164a6a5c0691af83ced2dc7b6f3a957b79040d15385c7a308c037",
-        "signature": "1eb1fcddcb8829f2aa2f0604f79614606b035b532aecd6337d15bb753d1b010f",
-        "affectsGlobalScope": false
-      },
-      "./src/modules/mailer/mailer.service.ts": {
-        "version": "25056b4cbcaadcdb52de8cb24842fadf581f9395554a005262626a510f3e2475",
-        "signature": "82ed05a4de00988a294e867cbe6f1a24af69d056b379c9cf5cfad8ae4eb423e7",
-        "affectsGlobalScope": false
-      },
       "./node_modules/@nestjs/swagger/dist/interfaces/open-api-spec.interface.d.ts": {
         "version": "7042fea4affa85bd05c1c7c9a2e42773738e3aced630b1c7e8e6b48e90a48069",
         "signature": "7042fea4affa85bd05c1c7c9a2e42773738e3aced630b1c7e8e6b48e90a48069",
@@ -3539,6 +3534,16 @@
       "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts": {
         "version": "b923bafce31ba28c956485071e07bec29f5286138418f9768cc6a7bb1684b9d8",
         "signature": "b923bafce31ba28c956485071e07bec29f5286138418f9768cc6a7bb1684b9d8",
+        "affectsGlobalScope": false
+      },
+      "./src/modules/mailer/dto/user-email.dto.ts": {
+        "version": "b0c66b971b9665e480ef79a4c6cb4fcf66917905f135057c8ab3f3aa97c23eb9",
+        "signature": "1eb1fcddcb8829f2aa2f0604f79614606b035b532aecd6337d15bb753d1b010f",
+        "affectsGlobalScope": false
+      },
+      "./src/modules/mailer/mailer.service.ts": {
+        "version": "786a0be6c058e6fa0cba7f3de7f9fe5cfbabe4520d739f831d8e860840e788f0",
+        "signature": "82ed05a4de00988a294e867cbe6f1a24af69d056b379c9cf5cfad8ae4eb423e7",
         "affectsGlobalScope": false
       },
       "./src/modules/auth/dto/registered-user.dto.ts": {
@@ -3801,8 +3806,18 @@
         "signature": "fb25e6384396ded66e49f9a3666751c3d09c1eda4296a2f6bdaf111704e07597",
         "affectsGlobalScope": false
       },
+      "./src/modules/auth/dto/authorized-user.dto.ts": {
+        "version": "ffb8908ed1224dd321f2f5efe9af0be6b64858c4d0dfde85f426f4397654893d",
+        "signature": "1921e2fd6917b458916eb81eac366b2386147566f494adffb87652c9fea3849a",
+        "affectsGlobalScope": false
+      },
+      "./src/modules/auth/dto/jwt-response.dto.ts": {
+        "version": "b0cea72ea555a50a977ac5aa00a1a549fef995f0137f5709010fcfdc6c629414",
+        "signature": "b8627cb6d3af684a63f701305f7cd42870cf655bbe2a0c43dcdd19df38f30ae6",
+        "affectsGlobalScope": false
+      },
       "./src/modules/auth/auth.controller.ts": {
-        "version": "eec6baf32d3245c18d2cf1cee689e0cdda85f9513564bef04e298d701d7ef955",
+        "version": "07c7d9137a5b86b6999c97f5e9bca66cbffb76c71057d355becfb5b437d1cac3",
         "signature": "2e13be7f99fc53b741c13cf13d6924286ad4b76fa29dc50c5bc5c193c0e54af6",
         "affectsGlobalScope": false
       },
@@ -4435,6 +4450,9 @@
         "./node_modules/typeorm/index.d.ts"
       ],
       "./migration/1608675714637-userentity.ts": [
+        "./node_modules/typeorm/index.d.ts"
+      ],
+      "./migration/1608901647308-userentity.ts": [
         "./node_modules/typeorm/index.d.ts"
       ],
       "./node_modules/@babel/parser/typings/babel-parser.d.ts": [
@@ -7660,6 +7678,8 @@
         "./node_modules/@nestjs/common/index.d.ts",
         "./node_modules/@nestjs/swagger/index.d.ts",
         "./src/modules/auth/auth.service.ts",
+        "./src/modules/auth/dto/authorized-user.dto.ts",
+        "./src/modules/auth/dto/jwt-response.dto.ts",
         "./src/modules/auth/dto/login-user.dto.ts",
         "./src/modules/auth/dto/register-user.dto.ts",
         "./src/modules/auth/dto/registered-user.dto.ts",
@@ -7695,6 +7715,15 @@
         "./src/modules/auth/models/user.interface.ts",
         "./src/modules/mailer/dto/confirmation-email.dto.ts",
         "./src/modules/mailer/mailer.service.ts"
+      ],
+      "./src/modules/auth/dto/authorized-user.dto.ts": [
+        "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts",
+        "./node_modules/class-validator/types/index.d.ts"
+      ],
+      "./src/modules/auth/dto/jwt-response.dto.ts": [
+        "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts",
+        "./node_modules/class-validator/types/index.d.ts",
+        "./src/modules/auth/dto/authorized-user.dto.ts"
       ],
       "./src/modules/auth/dto/login-user.dto.ts": [
         "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts",
@@ -7736,6 +7765,7 @@
         "./node_modules/class-validator/types/index.d.ts"
       ],
       "./src/modules/mailer/dto/user-email.dto.ts": [
+        "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts",
         "./node_modules/class-validator/types/index.d.ts"
       ],
       "./src/modules/mailer/mailer.controller.ts": [
@@ -7776,6 +7806,9 @@
         "./node_modules/typeorm/index.d.ts"
       ],
       "./migration/1608675714637-userentity.ts": [
+        "./node_modules/typeorm/index.d.ts"
+      ],
+      "./migration/1608901647308-userentity.ts": [
         "./node_modules/typeorm/index.d.ts"
       ],
       "./node_modules/@babel/parser/typings/babel-parser.d.ts": [
@@ -10997,6 +11030,9 @@
         "./src/modules/auth/models/user.interface.ts",
         "./src/modules/mailer/mailer.service.ts"
       ],
+      "./src/modules/auth/dto/jwt-response.dto.ts": [
+        "./src/modules/auth/dto/authorized-user.dto.ts"
+      ],
       "./src/modules/auth/dto/registered-user.dto.ts": [
         "./src/modules/auth/entities/user.entity.ts"
       ],
@@ -11038,6 +11074,7 @@
     "semanticDiagnosticsPerFile": [
       "./migration/1608508429795-userentity.ts",
       "./migration/1608675714637-userentity.ts",
+      "./migration/1608901647308-userentity.ts",
       "./node_modules/@babel/parser/typings/babel-parser.d.ts",
       "./node_modules/@babel/types/lib/index.d.ts",
       "./node_modules/@nestjs/common/cache/cache.constants.d.ts",
@@ -11899,6 +11936,8 @@
       "./src/modules/auth/auth.controller.ts",
       "./src/modules/auth/auth.module.ts",
       "./src/modules/auth/auth.service.ts",
+      "./src/modules/auth/dto/authorized-user.dto.ts",
+      "./src/modules/auth/dto/jwt-response.dto.ts",
       "./src/modules/auth/dto/login-user.dto.ts",
       "./src/modules/auth/dto/register-user.dto.ts",
       "./src/modules/auth/dto/registered-user.dto.ts",

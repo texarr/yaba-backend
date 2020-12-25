@@ -6,6 +6,8 @@ import { RegisterUserDto } from './dto/register-user.dto';
 import { RegisteredUserDto } from './dto/registered-user.dto';
 import { LoginUserDto } from './dto/login-user.dto';
 import { JwtResponseInterface } from './interfaces/jwt-response.interface';
+import { JwtResponseDto } from './dto/jwt-response.dto';
+import { AuthorizedUserDto } from './dto/authorized-user.dto';
 
 @Controller('auth')
 export class AuthController {
@@ -15,7 +17,7 @@ export class AuthController {
   @ApiResponse({
     status: 201,
     description: 'Account created',
-    type: UserInterface,
+    type: AuthorizedUserDto,
   })
   async registerUser(
     @Body() registerUserDTO: RegisterUserDto,
@@ -39,7 +41,7 @@ export class AuthController {
   @ApiResponse({
     status: 201,
     description: 'Logged in successfully',
-    type: JwtResponseInterface,
+    type: JwtResponseDto,
   })
   async loginUser(
     @Body() loginUserDto: LoginUserDto,

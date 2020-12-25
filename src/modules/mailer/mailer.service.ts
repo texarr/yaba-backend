@@ -83,7 +83,10 @@ export class MailerService {
         confirmationToken: existingAccount.confirmationToken,
       });
 
-      return await this.userRepository.save(existingAccount);
+      const existingAccountCb: UserInterface = existingAccount;
+      delete existingAccountCb.password;
+
+      return await this.userRepository.save(existingAccountCb);
     }
 
     return null;
