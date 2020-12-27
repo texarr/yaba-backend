@@ -3621,8 +3621,13 @@
         "signature": "9f1084d4a3b5096be342abe0e03cf05ed8b209d7cbabe4be0288df979e4773e9",
         "affectsGlobalScope": false
       },
+      "./src/modules/auth/exceptions/user-already-confirmed.exception.ts": {
+        "version": "dc3957bceeae4039b28fc3d82f9d492fb75f0c9b4e6f9a3d7caeb01a4f563421",
+        "signature": "82569f051e389bd5d8dcf26524208b6c100bcb71a48d0973275de796967af5f7",
+        "affectsGlobalScope": false
+      },
       "./src/modules/auth/auth.service.ts": {
-        "version": "130ad3d3b483442480179e163dce60344f82d4cf2c47ee1f29155271d9dbe1fc",
+        "version": "5f4a1d873ce6652c8425f6008514cb53a3970cce0e29e65abe95d077c1fc9331",
         "signature": "ea633526c07f440e02edcc3a6676b8eb5150f741473d1c372c8cb895a3b98a4d",
         "affectsGlobalScope": false
       },
@@ -7710,6 +7715,7 @@
         "./src/modules/auth/exceptions/emailtaken.exception.ts",
         "./src/modules/auth/exceptions/incorrect-password.exception.ts",
         "./src/modules/auth/exceptions/password-required.exception.ts",
+        "./src/modules/auth/exceptions/user-already-confirmed.exception.ts",
         "./src/modules/auth/interfaces/jwt-payload.interface.ts",
         "./src/modules/auth/interfaces/jwt-response.interface.ts",
         "./src/modules/auth/models/user.interface.ts",
@@ -7756,6 +7762,9 @@
         "./node_modules/@nestjs/common/index.d.ts"
       ],
       "./src/modules/auth/exceptions/password-required.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
+      ],
+      "./src/modules/auth/exceptions/user-already-confirmed.exception.ts": [
         "./node_modules/@nestjs/common/index.d.ts"
       ],
       "./src/modules/auth/interfaces/jwt-response.interface.ts": [
@@ -11051,6 +11060,9 @@
       "./src/modules/auth/exceptions/password-required.exception.ts": [
         "./node_modules/@nestjs/common/index.d.ts"
       ],
+      "./src/modules/auth/exceptions/user-already-confirmed.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
+      ],
       "./src/modules/auth/interfaces/jwt-response.interface.ts": [
         "./src/modules/auth/models/user.interface.ts"
       ],
@@ -11947,6 +11959,7 @@
       "./src/modules/auth/exceptions/emailtaken.exception.ts",
       "./src/modules/auth/exceptions/incorrect-password.exception.ts",
       "./src/modules/auth/exceptions/password-required.exception.ts",
+      "./src/modules/auth/exceptions/user-already-confirmed.exception.ts",
       "./src/modules/auth/interfaces/jwt-payload.interface.ts",
       "./src/modules/auth/interfaces/jwt-response.interface.ts",
       "./src/modules/auth/models/user.interface.ts",

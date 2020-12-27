@@ -17,6 +17,7 @@ import { JwtPayloadInterface } from './interfaces/jwt-payload.interface';
 import { JwtService } from '@nestjs/jwt';
 import { EmailNotConfirmedException } from './exceptions/email-not-confirmed.exception';
 import { PasswordRequiredException } from './exceptions/password-required.exception';
+import { UserAlreadyConfirmedException } from './exceptions/user-already-confirmed.exception';
 
 @Injectable()
 export class AuthService {
@@ -32,6 +33,9 @@ export class AuthService {
       email: newUser.email,
     });
     if (userExists) {
+      if (!userExists.emailConfirmed) {
+        throw new EmailNotConfirmedException();
+      }
       throw new EmailTakenException();
     }
 
@@ -72,6 +76,10 @@ export class AuthService {
       existingAccount &&
       existingAccount.confirmationToken === confirmationToken
     ) {
+      if (existingAccount.emailConfirmed) {
+        throw new UserAlreadyConfirmedException();
+      }
+
       existingAccount.emailConfirmed = true;
       await this.userRepository.save(existingAccount);
 
