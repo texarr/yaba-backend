@@ -21,6 +21,7 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
         password: process.env.TYPEORM_PASSWORD,
         database: String(process.env.TYPEORM_DATABASE),
         entities: entities,
+        autoLoadEntities: true,
         synchronize: process.env.TYPEORM_SYNCHRONIZE === 'true',
         logging: process.env.TYPEORM_LOGGING === 'true',
         extra: {

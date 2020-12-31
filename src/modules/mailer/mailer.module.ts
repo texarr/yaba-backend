@@ -5,9 +5,7 @@ import { MailerController } from './mailer.controller';
 import { MailerService } from './mailer.service';
 
 @Module({
-  imports: [
-    TypeOrmModule.forFeature([UserEntity]),
-  ],
+  imports: [TypeOrmModule.forFeature([UserEntity])],
   controllers: [MailerController],
   providers: [MailerService],
 })

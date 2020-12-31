@@ -17,8 +17,4 @@ export class AuthorizedUserDto {
   @ApiModelProperty()
   @IsBoolean()
   emailConfirmed: boolean;
-
-  @ApiModelProperty()
-  @IsString()
-  confirmationToken?: string;
 }

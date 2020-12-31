@@ -3,9 +3,6 @@ import { IsEmail, IsNotEmpty } from 'class-validator';
 
 export class RegisterUserDto {
   @ApiModelProperty()
-  id: string;
-
-  @ApiModelProperty()
   @IsNotEmpty()
   name: string;
 
@@ -16,10 +13,4 @@ export class RegisterUserDto {
   @ApiModelProperty()
   @IsNotEmpty()
   password: string;
-
-  @ApiModelProperty()
-  emailConfirmed: boolean;
-
-  @ApiModelProperty()
-  confirmationToken: string;
 }

@@ -6,6 +6,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmConfigService } from './type-orm-config.service';
 import { ConfigModule } from '@nestjs/config';
 import { MailerModule } from './modules/mailer/mailer.module';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { MailerModule } from './modules/mailer/mailer.module';
     }),
     AuthModule,
     MailerModule,
+    DashboardModule,
   ],
   controllers: [AppController],
   providers: [AppService],

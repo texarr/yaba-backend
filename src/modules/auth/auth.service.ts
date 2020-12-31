@@ -18,6 +18,7 @@ import { JwtService } from '@nestjs/jwt';
 import { EmailNotConfirmedException } from './exceptions/email-not-confirmed.exception';
 import { PasswordRequiredException } from './exceptions/password-required.exception';
 import { UserAlreadyConfirmedException } from './exceptions/user-already-confirmed.exception';
+import { RegisterUserDto } from './dto/register-user.dto';
 
 @Injectable()
 export class AuthService {
@@ -28,7 +29,7 @@ export class AuthService {
     private readonly jwtService: JwtService,
   ) {}
 
-  async registerUser(newUser: UserInterface): Promise<UserInterface> {
+  async registerUser(newUser: RegisterUserDto): Promise<UserInterface> {
     const userExists = await this.userRepository.findOne({
       email: newUser.email,
     });
@@ -143,5 +144,14 @@ export class AuthService {
       expiresIn: 3600000,
       accessToken,
     };
+  }
+
+  async findOneUserByEmail(email: string): Promise<UserInterface | undefined> {
+    return await this.userRepository.findOne(
+      { email, emailConfirmed: true },
+      {
+        select: ['id', 'name', 'email', 'password'],
+      },
+    );
   }
 }
