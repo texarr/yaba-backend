@@ -1,6 +1,6 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
-import { CategoryEntity } from './category.entity';
 import { ApiModelProperty } from '@nestjs/swagger/dist/decorators/api-model-property.decorator';
+import { CategoryEntity } from './category.entity';
 import { ApiProperty } from '@nestjs/swagger';
 
 @Entity()
@@ -13,8 +13,7 @@ export class ChildCategoryEntity {
   @Column()
   name: string;
 
-  @ApiModelProperty()
-  @ManyToOne(() => CategoryEntity, (category) => category.name)
+  @ManyToOne(() => CategoryEntity, (category) => category.childCategories)
   @ApiProperty({ type: () => CategoryEntity })
   category: CategoryEntity;
 }

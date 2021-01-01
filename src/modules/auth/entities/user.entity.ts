@@ -32,10 +32,13 @@ export class UserEntity {
   @Column()
   confirmationToken: string;
 
-  @ApiModelProperty()
   @OneToMany(
     () => CategoryTemplateEntity,
-    (categoryTemplate) => categoryTemplate.id,
+    (categoryTemplate) => categoryTemplate.user,
+    {
+      cascade: true,
+      onDelete: 'CASCADE',
+    },
   )
   categoryTemplates: CategoryTemplateEntity[];
 

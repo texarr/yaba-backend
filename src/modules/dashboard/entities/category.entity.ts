@@ -1,8 +1,14 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
-import { IconEntity } from './icon.entity';
+import {
+  Column,
+  Entity,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { ChildCategoryEntity } from './child-category.entity';
 import { ApiModelProperty } from '@nestjs/swagger/dist/decorators/api-model-property.decorator';
 import { ApiProperty } from '@nestjs/swagger';
+import { CategoryTemplateEntity } from './category-template.entity';
 
 @Entity()
 export class CategoryEntity {
@@ -15,12 +21,25 @@ export class CategoryEntity {
   name: string;
 
   @ApiModelProperty()
-  @OneToMany(() => IconEntity, (icon) => icon.name)
-  @ApiProperty({ type: () => IconEntity })
-  icon: IconEntity;
+  @ApiProperty()
+  @Column()
+  icon: string;
 
   @ApiModelProperty()
-  @OneToMany(() => ChildCategoryEntity, (childCategory) => childCategory.name)
+  @OneToMany(
+    () => ChildCategoryEntity,
+    (childCategory) => childCategory.category,
+    {
+      cascade: true,
+      onDelete: 'CASCADE',
+    },
+  )
   @ApiProperty({ type: () => ChildCategoryEntity, isArray: true })
   childCategories: ChildCategoryEntity[];
+
+  @ManyToOne(
+    () => CategoryTemplateEntity,
+    (categoryTemplate) => categoryTemplate.incomes || categoryTemplate.outcomes,
+  )
+  categoryTemplate: CategoryTemplateEntity;
 }

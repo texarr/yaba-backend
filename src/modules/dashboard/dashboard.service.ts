@@ -4,8 +4,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CategoryNotFoundException } from './exceptions/category-not-found.exception';
 import { plainToClassFromExist } from 'class-transformer';
-import { CategoryTemplateModel } from './models/category-template.model';
 import { TemplateNameAlreadyTakenException } from './exceptions/template-name-already-taken.exception';
+import { UserEntity } from '../auth/entities/user.entity';
 
 @Injectable()
 export class DashboardService {
@@ -16,22 +16,30 @@ export class DashboardService {
 
   async getUserCategories(
     templateName: string,
-  ): Promise<CategoryTemplateModel> {
-    const existingCategories = await this.categoryRepository.findOne({
-      templateName,
-    });
+  ): Promise<CategoryTemplateEntity> {
+    const existingCategories = await this.categoryRepository.findOne(
+      { templateName },
+      {
+        relations: [
+          'incomes',
+          'outcomes',
+          'incomes.childCategories',
+          'outcomes.childCategories',
+        ],
+      },
+    );
 
     if (!existingCategories) {
       throw new CategoryNotFoundException();
     }
 
-    console.log(existingCategories);
     return existingCategories;
   }
 
   async createCategories(
-    newCategory: CategoryTemplateModel,
-  ): Promise<CategoryTemplateModel | null> {
+    newCategory: CategoryTemplateEntity,
+    user: UserEntity,
+  ): Promise<CategoryTemplateEntity> {
     const existingCategory = await this.categoryRepository.findOne({
       templateName: newCategory.templateName,
     });
@@ -40,10 +48,9 @@ export class DashboardService {
       throw new TemplateNameAlreadyTakenException();
     }
 
-    // then generate new Category
-    // plainToClassFromExist
     const category = new CategoryTemplateEntity();
     plainToClassFromExist(category, { ...newCategory });
+    category.user = user;
 
     return await this.saveCategories(category);
   }

@@ -4,18 +4,18 @@ import { DashboardService } from './dashboard.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CategoryTemplateEntity } from './entities/category-template.entity';
 import { ChildCategoryEntity } from './entities/child-category.entity';
-import { IconEntity } from './entities/icon.entity';
+import { CategoryEntity } from './entities/category.entity';
 
 @Module({
   imports: [
     TypeOrmModule.forFeature([
-      CategoryTemplateEntity,
+      CategoryEntity,
       CategoryTemplateEntity,
       ChildCategoryEntity,
-      IconEntity,
     ]),
   ],
   controllers: [DashboardController],
   providers: [DashboardService],
+  exports: [DashboardService],
 })
 export class DashboardModule {}
