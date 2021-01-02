@@ -1456,14 +1456,9 @@
         "signature": "65916fb178938c9fb2c0588cf5447f5b5de992d50d0e308d6b2169a027fa9dd5",
         "affectsGlobalScope": false
       },
-      "./migration/1609542515650-userentity.ts": {
-        "version": "3de1c1d02ad43945375dc3d0bb256a5c07536ce5a4a70a17c3a7106acf2bb1c9",
-        "signature": "0f430e19d2b827b8c7b5b77f9f1f33b3f756cd84236089bf8df3c6dae6219988",
-        "affectsGlobalScope": false
-      },
-      "./migration/1609542587920-userentity.ts": {
-        "version": "f229b9a8416e13a0db35433dd7843c362ba514a17cfde90c3da0f03ca083a603",
-        "signature": "75c7b3659ff2c514640d134c30b0ceeba814be88074ff4bf6c8ab6ec0e14ff81",
+      "./migration/1609611114306-userentity.ts": {
+        "version": "278e4bb8dfe5d7702263a2810df5f8ce74a473cc9bc4822854f27e00f9193edd",
+        "signature": "4f2527115ee66c835d5a5ebf46b344709083f410217160d668f146d70f5e4324",
         "affectsGlobalScope": false
       },
       "./node_modules/@nestjs/common/cache/cache.constants.d.ts": {
@@ -2742,8 +2737,8 @@
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/entities/category-template.entity.ts": {
-        "version": "2d54b6481772830b4c31abe30c85e426899178b4bb3d1cca1c59ef1f528dc13c",
-        "signature": "cb2ed20674e1d76170213ffd577a34f577a7c6f0a371ea3ddb0451af42f0b7d8",
+        "version": "6c11c84559a17952011501e32894ecaddc6b13fcc13bbf81f7d8a192cc7779b2",
+        "signature": "f5799706ba46ca296ad2f1bc4bf23584712f86b8af113aa4de19df99073ea70e",
         "affectsGlobalScope": false
       },
       "./src/modules/auth/entities/user.entity.ts": {
@@ -3727,7 +3722,7 @@
         "affectsGlobalScope": false
       },
       "./src/modules/mailer/mailer.service.ts": {
-        "version": "786a0be6c058e6fa0cba7f3de7f9fe5cfbabe4520d739f831d8e860840e788f0",
+        "version": "48b558bf731c0abd53d6024648ef7bab7dd99707db520a6c9576ce20ee72ead9",
         "signature": "82ed05a4de00988a294e867cbe6f1a24af69d056b379c9cf5cfad8ae4eb423e7",
         "affectsGlobalScope": false
       },
@@ -3953,7 +3948,7 @@
       },
       "./src/entities.ts": {
         "version": "4251102f4e747ac20732626a86fe49837d4000a55bbb04a84f746bde6f217c6f",
-        "signature": "a953300568f3da1914c1e50f518bed5a46935b390c6467354907729ded70a953",
+        "signature": "15389d4ff8652c7cca8660fe17b3d8802b0ecae1803aa08adaa20e4f7965bbd8",
         "affectsGlobalScope": false
       },
       "./src/type-orm-config.service.ts": {
@@ -4041,9 +4036,19 @@
         "signature": "1e8720aebacea932609d039e744676449d73725b5b7af3d5e49f778c039a0e07",
         "affectsGlobalScope": false
       },
+      "./src/modules/dashboard/exceptions/template-not-found.exception.ts": {
+        "version": "03465a7b911bdff91ca27086c86a78b71d714cf8b70713e4fd84cad585ad67c0",
+        "signature": "d9907b9a6e49d7df82196de774c84fd4eea622f75501caad5a1be3c714a30958",
+        "affectsGlobalScope": false
+      },
+      "./src/modules/dashboard/exceptions/no-templates.exception.ts": {
+        "version": "8fe45d8e7dfdaf9bc97d07e2b95e1bd236d718605993df370c759a4ecfbb1452",
+        "signature": "e12d7618271a90a1fa7fec57bf8a81f3ec00af0833af427d63dad19ed72d8c94",
+        "affectsGlobalScope": false
+      },
       "./src/modules/dashboard/dashboard.service.ts": {
-        "version": "3aaa3cc89689104f04dd7df20777b4a8235474740d3b1907dafe058f69786574",
-        "signature": "e5c99775ac2ca5d9e2b5eb50060a95cffef27b2ea5191fd587513b14dfb91736",
+        "version": "efddaac06923ab9335cbbea020ab6c913f11f5177cd6429c019e9b19134678df",
+        "signature": "5306860701a7f657609c23a732eca82a4b9c765532ee8900a441773cc4003c40",
         "affectsGlobalScope": false
       },
       "./src/modules/auth/decorators/user.decorator.ts": {
@@ -4052,8 +4057,8 @@
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/dashboard.controller.ts": {
-        "version": "496a28c9aee56403c8c598a034304686f6cf1f872ba2ff393fcd169de10ba701",
-        "signature": "a7af9523d1ca4772743613225af1f2319fb5a4bebdc6a46912b71a3b132157db",
+        "version": "24bac71d585e79c79bbea97c003f99d09d904ab23f1ca5c6c8cc694c15b83f73",
+        "signature": "bc6f15d7d537ff6dfd7e41b5c6a0283bbd4a9694b796660d239d0fe0a1ee483b",
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/dashboard.module.ts": {
@@ -4251,19 +4256,9 @@
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       },
-      "./src/modules/dashboard/models/icon.model.ts": {
-        "version": "42de052fe2f12a92fb2d765a38e7159a433eb5c1a0a90c60c0144ea1ee8357fd",
-        "signature": "1bcb7587316a8241378c83fbbec22ee74240306d64c1e9fba2bf8e6b5f08b6d5",
-        "affectsGlobalScope": false
-      },
-      "./src/modules/dashboard/models/child-category.model.ts": {
-        "version": "093759674760f79b31549e3ede4e5e1a695c93e2aeaa12dcda56234b89bef8bf",
-        "signature": "ae1de2792fd40f1842943df81fef2b3885a51e1fe7853b3a83ff0a7631833256",
-        "affectsGlobalScope": false
-      },
-      "./src/modules/dashboard/models/category.model.ts": {
-        "version": "72d2c4764ab113b3fbb0e23707cb53b2b457fc097da9232f155227c5258ee8f7",
-        "signature": "eaac1a3d104ba04947aedd96708b1b0363611ac2f9166181cc26fcb93726aacb",
+      "./src/modules/dashboard/exceptions/user-not-found.exception.ts": {
+        "version": "011c92b00341281fd043488b05ee527301832db6ad3407afa9c2206924a41a91",
+        "signature": "809f449ec5169c51d2dffed1056c41d7762683c7df597622f96baa543ecf6303",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/anymatch/index.d.ts": {
@@ -4334,6 +4329,11 @@
       "./node_modules/@types/graceful-fs/index.d.ts": {
         "version": "cb6cf0480ee1aa9f706db1f6f5add596a1aa10e8c4beb1817f2318384ba684dc",
         "signature": "cb6cf0480ee1aa9f706db1f6f5add596a1aa10e8c4beb1817f2318384ba684dc",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/@types/hapi__joi/index.d.ts": {
+        "version": "91a2fdd0c0d1fb495958b2d476785b000d8d337caba9078c14f48c65e324b17a",
+        "signature": "91a2fdd0c0d1fb495958b2d476785b000d8d337caba9078c14f48c65e324b17a",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/istanbul-lib-coverage/index.d.ts": {
@@ -4566,10 +4566,7 @@
       "configFilePath": "./tsconfig.build.json"
     },
     "referencedMap": {
-      "./migration/1609542515650-userentity.ts": [
-        "./node_modules/typeorm/index.d.ts"
-      ],
-      "./migration/1609542587920-userentity.ts": [
+      "./migration/1609611114306-userentity.ts": [
         "./node_modules/typeorm/index.d.ts"
       ],
       "./node_modules/@babel/parser/typings/babel-parser.d.ts": [
@@ -7966,7 +7963,9 @@
         "./src/modules/auth/entities/user.entity.ts",
         "./src/modules/dashboard/entities/category-template.entity.ts",
         "./src/modules/dashboard/exceptions/category-not-found.exception.ts",
-        "./src/modules/dashboard/exceptions/template-name-already-taken.exception.ts"
+        "./src/modules/dashboard/exceptions/no-templates.exception.ts",
+        "./src/modules/dashboard/exceptions/template-name-already-taken.exception.ts",
+        "./src/modules/dashboard/exceptions/template-not-found.exception.ts"
       ],
       "./src/modules/dashboard/entities/category-template.entity.ts": [
         "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts",
@@ -7991,19 +7990,17 @@
       "./src/modules/dashboard/exceptions/category-not-found.exception.ts": [
         "./node_modules/@nestjs/common/index.d.ts"
       ],
+      "./src/modules/dashboard/exceptions/no-templates.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
+      ],
       "./src/modules/dashboard/exceptions/template-name-already-taken.exception.ts": [
         "./node_modules/@nestjs/common/index.d.ts"
       ],
-      "./src/modules/dashboard/models/category.model.ts": [
-        "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts",
-        "./src/modules/dashboard/models/child-category.model.ts",
-        "./src/modules/dashboard/models/icon.model.ts"
+      "./src/modules/dashboard/exceptions/template-not-found.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
       ],
-      "./src/modules/dashboard/models/child-category.model.ts": [
-        "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts"
-      ],
-      "./src/modules/dashboard/models/icon.model.ts": [
-        "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts"
+      "./src/modules/dashboard/exceptions/user-not-found.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
       ],
       "./src/modules/mailer/dto/confirmation-email.dto.ts": [
         "./node_modules/class-validator/types/index.d.ts"
@@ -8046,10 +8043,7 @@
       ]
     },
     "exportedModulesMap": {
-      "./migration/1609542515650-userentity.ts": [
-        "./node_modules/typeorm/index.d.ts"
-      ],
-      "./migration/1609542587920-userentity.ts": [
+      "./migration/1609611114306-userentity.ts": [
         "./node_modules/typeorm/index.d.ts"
       ],
       "./node_modules/@babel/parser/typings/babel-parser.d.ts": [
@@ -11373,7 +11367,16 @@
       "./src/modules/dashboard/exceptions/category-not-found.exception.ts": [
         "./node_modules/@nestjs/common/index.d.ts"
       ],
+      "./src/modules/dashboard/exceptions/no-templates.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
+      ],
       "./src/modules/dashboard/exceptions/template-name-already-taken.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
+      ],
+      "./src/modules/dashboard/exceptions/template-not-found.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
+      ],
+      "./src/modules/dashboard/exceptions/user-not-found.exception.ts": [
         "./node_modules/@nestjs/common/index.d.ts"
       ],
       "./src/modules/mailer/mailer.controller.ts": [
@@ -11394,8 +11397,7 @@
       ]
     },
     "semanticDiagnosticsPerFile": [
-      "./migration/1609542515650-userentity.ts",
-      "./migration/1609542587920-userentity.ts",
+      "./migration/1609611114306-userentity.ts",
       "./node_modules/@babel/parser/typings/babel-parser.d.ts",
       "./node_modules/@babel/types/lib/index.d.ts",
       "./node_modules/@nestjs/common/cache/cache.constants.d.ts",
@@ -11662,6 +11664,7 @@
       "./node_modules/@types/express-serve-static-core/index.d.ts",
       "./node_modules/@types/express/index.d.ts",
       "./node_modules/@types/graceful-fs/index.d.ts",
+      "./node_modules/@types/hapi__joi/index.d.ts",
       "./node_modules/@types/istanbul-lib-coverage/index.d.ts",
       "./node_modules/@types/istanbul-lib-report/index.d.ts",
       "./node_modules/@types/istanbul-reports/index.d.ts",
@@ -12292,10 +12295,10 @@
       "./src/modules/dashboard/entities/category.entity.ts",
       "./src/modules/dashboard/entities/child-category.entity.ts",
       "./src/modules/dashboard/exceptions/category-not-found.exception.ts",
+      "./src/modules/dashboard/exceptions/no-templates.exception.ts",
       "./src/modules/dashboard/exceptions/template-name-already-taken.exception.ts",
-      "./src/modules/dashboard/models/category.model.ts",
-      "./src/modules/dashboard/models/child-category.model.ts",
-      "./src/modules/dashboard/models/icon.model.ts",
+      "./src/modules/dashboard/exceptions/template-not-found.exception.ts",
+      "./src/modules/dashboard/exceptions/user-not-found.exception.ts",
       "./src/modules/mailer/dto/confirmation-email.dto.ts",
       "./src/modules/mailer/dto/user-email.dto.ts",
       "./src/modules/mailer/mailer.controller.ts",

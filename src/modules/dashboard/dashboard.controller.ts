@@ -1,4 +1,12 @@
-import { Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  UseGuards,
+} from '@nestjs/common';
 import { DashboardService } from './dashboard.service';
 import { AuthGuard } from '@nestjs/passport';
 import { ApiResponse } from '@nestjs/swagger';
@@ -14,7 +22,7 @@ export class DashboardController {
   @UseGuards(AuthGuard('User'))
   @ApiResponse({
     status: 200,
-    description: 'List of my categories',
+    description: 'List of my template categories',
     type: CategoryTemplateEntity,
   })
   async getCategories(
@@ -23,7 +31,7 @@ export class DashboardController {
     return this.dashboardService.getUserCategories(templateName);
   }
 
-  @Post('category')
+  @Post('categoryTemplate')
   @UseGuards(AuthGuard('User'))
   @ApiResponse({
     status: 201,
@@ -34,10 +42,42 @@ export class DashboardController {
     status: 409,
     description: 'Category template name already exists',
   })
-  async createCategory(
+  async createCategoryTemplate(
     @Body() category: CategoryTemplateEntity,
     @UserDecorator() user: UserEntity,
   ): Promise<CategoryTemplateEntity> {
-    return this.dashboardService.createCategories(category, user);
+    return this.dashboardService.createCategoryTemplate(category, user);
+  }
+
+  @Get('templates')
+  @UseGuards(AuthGuard('User'))
+  @ApiResponse({
+    status: 200,
+    description: 'List of templates received',
+    isArray: true,
+  })
+  @ApiResponse({
+    status: 404,
+    description: 'You have no templates already',
+  })
+  async getUserTemplates(@UserDecorator() user: UserEntity): Promise<string[]> {
+    return this.dashboardService.getUserTemplates(user);
+  }
+
+  @Delete('template/:id')
+  @UseGuards(AuthGuard('User'))
+  @ApiResponse({
+    status: 200,
+    description: 'Template removed',
+  })
+  @ApiResponse({
+    status: 404,
+    description: 'Template not found',
+  })
+  async removeTemplate(
+    @Param('id') templateId: string,
+    @UserDecorator() user: UserEntity,
+  ): Promise<CategoryTemplateEntity> {
+    return this.dashboardService.deleteUserTemplate(user, templateId);
   }
 }

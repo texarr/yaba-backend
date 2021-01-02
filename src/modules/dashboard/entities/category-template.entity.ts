@@ -14,11 +14,14 @@ import { UserEntity } from '../../auth/entities/user.entity';
 export class CategoryTemplateEntity {
   @ApiModelProperty()
   @PrimaryGeneratedColumn()
-  id: string;
+  templateId: string;
 
   @ApiModelProperty()
   @Column()
   templateName: string;
+
+  @Column()
+  isActive: boolean;
 
   @ApiModelProperty()
   @OneToMany(() => CategoryEntity, (category) => category.categoryTemplate, {
@@ -36,7 +39,10 @@ export class CategoryTemplateEntity {
   @ApiProperty({ type: () => CategoryEntity, isArray: true })
   outcomes: CategoryEntity[];
 
-  // @ApiModelProperty()
   @ManyToOne(() => UserEntity, (user) => user.categoryTemplates)
   user: UserEntity;
+
+  constructor() {
+    this.isActive = true;
+  }
 }

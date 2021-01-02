@@ -1,0 +1,11 @@
+entity: UserEntity
+items:
+  user_test:
+    id: 'user_test_id'
+    name: 'Peppa The Pig'
+    email: 'dap.gml@gmail.com'
+    emailConfirmed: true
+    confirmationToken: 'user_test_confirmation_token'
+    __call:
+      setPassword:
+        - qwe123

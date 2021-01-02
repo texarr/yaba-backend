@@ -54,6 +54,7 @@ export class MailerService {
   async sendAccountConfirmationEmail(
     confirmationEmailDto: ConfirmationEmailDto,
   ) {
+    // todo: write readable confirmation mail template
     const text = `Witaj: ${confirmationEmailDto.name}
     Skopiuj ten adres w celu weryfikacji konta: ${process.env.APP_BASE_URL}/auth/confirm/${confirmationEmailDto.confirmationToken}`;
 
