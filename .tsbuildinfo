@@ -2727,17 +2727,17 @@
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/entities/child-category.entity.ts": {
-        "version": "4c06a340d847f999d6a2f4056d95fb57ce8dff659d3793f93454a4d2b5bfabfa",
+        "version": "64e6976288317c25b59a0446aa6866244cdb49f6650c2fc3d15b53aafbec7f45",
         "signature": "98824e32760f08f4b3e7e8a8956f5a2f65d73f4704a657fdf21caf3e91b8a36b",
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/entities/category.entity.ts": {
-        "version": "2dede14dd2778d4641085f4f82d3b2be0d9606ba2b4eb417b0630f3b319c4fd0",
+        "version": "18e19090fa5dda1e350f863299b2fdb6982da6a83cdaef3dbf39527c138fe556",
         "signature": "53721300b05ac95c31e4fefb3987f1f9109e1e0e84a9c0455139ff1ab5526d13",
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/entities/category-template.entity.ts": {
-        "version": "6c11c84559a17952011501e32894ecaddc6b13fcc13bbf81f7d8a192cc7779b2",
+        "version": "5b00eb0bc8d7f3261a50444ce5311c25f735d41c29986d2e8147072172ecb6fc",
         "signature": "f5799706ba46ca296ad2f1bc4bf23584712f86b8af113aa4de19df99073ea70e",
         "affectsGlobalScope": false
       },

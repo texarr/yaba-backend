@@ -12,7 +12,6 @@ import { UserEntity } from '../../auth/entities/user.entity';
 
 @Entity()
 export class CategoryTemplateEntity {
-  @ApiModelProperty()
   @PrimaryGeneratedColumn()
   templateId: string;
 

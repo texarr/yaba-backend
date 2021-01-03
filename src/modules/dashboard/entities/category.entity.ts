@@ -12,7 +12,6 @@ import { CategoryTemplateEntity } from './category-template.entity';
 
 @Entity()
 export class CategoryEntity {
-  @ApiModelProperty()
   @PrimaryGeneratedColumn()
   id: string;
 
