@@ -4047,7 +4047,7 @@
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/dashboard.service.ts": {
-        "version": "efddaac06923ab9335cbbea020ab6c913f11f5177cd6429c019e9b19134678df",
+        "version": "5699d772b43e98902489fdbb511453038c51977f69d9d5148a38e2aef6594230",
         "signature": "5306860701a7f657609c23a732eca82a4b9c765532ee8900a441773cc4003c40",
         "affectsGlobalScope": false
       },

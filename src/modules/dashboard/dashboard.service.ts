@@ -35,6 +35,10 @@ export class DashboardService {
       throw new CategoryNotFoundException();
     }
 
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    delete existingCategories.isActive;
+
     return existingCategories;
   }
 
