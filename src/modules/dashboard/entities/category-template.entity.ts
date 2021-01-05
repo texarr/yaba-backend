@@ -23,7 +23,7 @@ export class CategoryTemplateEntity {
   isActive: boolean;
 
   @ApiModelProperty()
-  @OneToMany(() => CategoryEntity, (category) => category.categoryTemplate, {
+  @OneToMany(() => CategoryEntity, (category) => category.incomeCategories, {
     cascade: true,
     onDelete: 'CASCADE',
   })
@@ -31,7 +31,7 @@ export class CategoryTemplateEntity {
   incomes: CategoryEntity[];
 
   @ApiModelProperty()
-  @OneToMany(() => CategoryEntity, (category) => category.categoryTemplate, {
+  @OneToMany(() => CategoryEntity, (category) => category.outcomeCategories, {
     cascade: true,
     onDelete: 'CASCADE',
   })

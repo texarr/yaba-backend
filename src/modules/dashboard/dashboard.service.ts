@@ -4,7 +4,6 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CategoryNotFoundException } from './exceptions/category-not-found.exception';
 import { plainToClassFromExist } from 'class-transformer';
-import { TemplateNameAlreadyTakenException } from './exceptions/template-name-already-taken.exception';
 import { UserEntity } from '../auth/entities/user.entity';
 import { TemplateNotFoundException } from './exceptions/template-not-found.exception';
 import { NoTemplatesException } from './exceptions/no-templates.exception';
@@ -20,7 +19,7 @@ export class DashboardService {
     templateName: string,
   ): Promise<CategoryTemplateEntity> {
     const existingCategories = await this.categoryRepository.findOne(
-      { templateName },
+      { templateName, isActive: true },
       {
         relations: [
           'incomes',
@@ -46,14 +45,6 @@ export class DashboardService {
     newCategory: CategoryTemplateEntity,
     user: UserEntity,
   ): Promise<CategoryTemplateEntity> {
-    const existingCategory = await this.categoryRepository.findOne({
-      templateName: newCategory.templateName,
-    });
-
-    if (existingCategory) {
-      throw new TemplateNameAlreadyTakenException();
-    }
-
     const category = new CategoryTemplateEntity();
     plainToClassFromExist(category, { ...newCategory });
     category.user = user;
@@ -74,6 +65,7 @@ export class DashboardService {
     const existingTemplate = await this.categoryRepository.findOne({
       templateId: templateId,
       user: user,
+      isActive: true,
     });
 
     if (!existingTemplate) {

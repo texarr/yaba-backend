@@ -38,7 +38,13 @@ export class CategoryEntity {
 
   @ManyToOne(
     () => CategoryTemplateEntity,
-    (categoryTemplate) => categoryTemplate.incomes || categoryTemplate.outcomes,
+    (categoryTemplate) => categoryTemplate.incomes,
   )
-  categoryTemplate: CategoryTemplateEntity;
+  incomeCategories: CategoryTemplateEntity;
+
+  @ManyToOne(
+    () => CategoryTemplateEntity,
+    (categoryTemplate) => categoryTemplate.outcomes,
+  )
+  outcomeCategories: CategoryTemplateEntity;
 }
