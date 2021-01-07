@@ -1,15 +1,15 @@
 import { Injectable } from '@nestjs/common';
-import { CategoryTemplateEntity } from './entities/category-template.entity';
+import { CategoryTemplateEntity } from '../../entities/category-template.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { CategoryNotFoundException } from './exceptions/category-not-found.exception';
+import { CategoryNotFoundException } from '../../exceptions/category-not-found.exception';
 import { plainToClassFromExist } from 'class-transformer';
-import { UserEntity } from '../auth/entities/user.entity';
-import { TemplateNotFoundException } from './exceptions/template-not-found.exception';
-import { NoTemplatesException } from './exceptions/no-templates.exception';
+import { UserEntity } from '../../../auth/entities/user.entity';
+import { TemplateNotFoundException } from '../../exceptions/template-not-found.exception';
+import { NoTemplatesException } from '../../exceptions/no-templates.exception';
 
 @Injectable()
-export class DashboardService {
+export class CategoryTemplateService {
   constructor(
     @InjectRepository(CategoryTemplateEntity)
     private readonly categoryRepository: Repository<CategoryTemplateEntity>,

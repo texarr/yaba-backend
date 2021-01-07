@@ -20,11 +20,10 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
-    "migration:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate -n UserEntity",
-    "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run",
-    "migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert",
-    "fixtures:dev": "fixtures ./fixtures/dev --config ./.env --require ts-node/register",
-    "db:up": "migration:generate && migration:run && fixtures:dev"
+    "m:g": "ts-node ./node_modules/typeorm/cli.js migration:generate -n UserEntity",
+    "m:r": "ts-node ./node_modules/typeorm/cli.js migration:run",
+    "m:rev": "ts-node ./node_modules/typeorm/cli.js migration:revert",
+    "f:dev": "fixtures ./fixtures/dev --config ./.env --require ts-node/register"
   },
   "dependencies": {
     "@nestjs/common": "^7.5.1",

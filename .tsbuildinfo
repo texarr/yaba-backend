@@ -1456,9 +1456,9 @@
         "signature": "65916fb178938c9fb2c0588cf5447f5b5de992d50d0e308d6b2169a027fa9dd5",
         "affectsGlobalScope": false
       },
-      "./migration/1609886543596-userentity.ts": {
-        "version": "e580994bc8629fc7a0dfaf26c85165c4e903230b5b83e06ba3e4eb8d2d56e369",
-        "signature": "363ee58685324da7923063c829a01c1bbe4775c82a81f1ae1a12c1fdced2cc48",
+      "./migration/1610059740956-userentity.ts": {
+        "version": "309fcdcf50ff23ffb9d7e00b5e58f3087f91a2a5d56cb285569345f67adeaf00",
+        "signature": "c16f8952d66f419a7abe32e931fb7fe53c3225f90f306a9c803a7a25e75c7df5",
         "affectsGlobalScope": false
       },
       "./node_modules/@nestjs/common/cache/cache.constants.d.ts": {
@@ -2741,9 +2741,19 @@
         "signature": "f5799706ba46ca296ad2f1bc4bf23584712f86b8af113aa4de19df99073ea70e",
         "affectsGlobalScope": false
       },
+      "./src/modules/dashboard/enums/budget-status.enum.ts": {
+        "version": "b8387ba8349aa309d78bb1683f8fcc8c5c5fd8fecdb5d72b641068b000f6afa5",
+        "signature": "601d46d08fd3d721fa5361cda6aca99175dfdfe65550a6a46df9093627c8335d",
+        "affectsGlobalScope": false
+      },
+      "./src/modules/dashboard/entities/budget.entity.ts": {
+        "version": "c55db22e63ab9e1739f01063fb1ae66ea824bfb9c9b15dcef52c9b797b729725",
+        "signature": "5ad092161cf733690225d8a1bb596116d1a0349b28415c6fe6f49d7aa56247af",
+        "affectsGlobalScope": false
+      },
       "./src/modules/auth/entities/user.entity.ts": {
-        "version": "7359d0d5d178214ab3e7dc6b8fd9181544d8321c87d8e604ac0cd3c7ff378705",
-        "signature": "b709dae4116dd5055739a53d0683c035778ae1ddeec11d70c2d2117bface2aab",
+        "version": "7116a5d058f909f4f1648ffe7b6af004ea09b9327a7bd4a09661e4fb42c8440a",
+        "signature": "64ce2c490364943cc0d5b99028b1288ba254386f64ec8fb032a6e46b60850854",
         "affectsGlobalScope": false
       },
       "./node_modules/@nestjs/typeorm/dist/interfaces/entity-class-or-schema.type.d.ts": {
@@ -3947,8 +3957,8 @@
         "affectsGlobalScope": false
       },
       "./src/entities.ts": {
-        "version": "4251102f4e747ac20732626a86fe49837d4000a55bbb04a84f746bde6f217c6f",
-        "signature": "a953300568f3da1914c1e50f518bed5a46935b390c6467354907729ded70a953",
+        "version": "244b76024e87985a1d95cc11c61699d939696027f53b1653eb07a44bb0d259e9",
+        "signature": "ef02487bc63aaa05a05375a0e325eb53b5a0aa0a114280226c35cef326d8e218",
         "affectsGlobalScope": false
       },
       "./src/type-orm-config.service.ts": {
@@ -4041,9 +4051,9 @@
         "signature": "e12d7618271a90a1fa7fec57bf8a81f3ec00af0833af427d63dad19ed72d8c94",
         "affectsGlobalScope": false
       },
-      "./src/modules/dashboard/dashboard.service.ts": {
-        "version": "61f7df53d6183c0a65ec9ae81b8288e64ea179f425772a2a4c70a42062e6c824",
-        "signature": "5306860701a7f657609c23a732eca82a4b9c765532ee8900a441773cc4003c40",
+      "./src/modules/dashboard/services/category-template/category-template.service.ts": {
+        "version": "131b92f96bb885d2a5661d07b2a92473904ec575a8df3c377e4b9a7be842efc1",
+        "signature": "bc24f0bf95d0aace0a35329c6db6628242b9230268dbd12b839a7168ceb4e725",
         "affectsGlobalScope": false
       },
       "./src/modules/auth/decorators/user.decorator.ts": {
@@ -4051,13 +4061,23 @@
         "signature": "ed6ed517059f87051d97b034bde471151483437602b2504668d146f13b12693a",
         "affectsGlobalScope": false
       },
+      "./src/modules/dashboard/exceptions/no-budgets.exception.ts": {
+        "version": "63a547ea91a0b768fbfb574dda07c9153d7cf07975278f87a0eb7f6251c6bcc3",
+        "signature": "106de3b195d2868f279e002a401bf0fd1f81a732002d20844f09be24c68baab9",
+        "affectsGlobalScope": false
+      },
+      "./src/modules/dashboard/services/budgets/budgets.service.ts": {
+        "version": "214487a735d0265640d2ff00b54aa4c4c623cfca69392f32813453f5d06b86e6",
+        "signature": "8a794c6ba4cc8e3a0c6bc75e264692f4aa386282a31e8dd9a8e558490a01051a",
+        "affectsGlobalScope": false
+      },
       "./src/modules/dashboard/dashboard.controller.ts": {
-        "version": "24bac71d585e79c79bbea97c003f99d09d904ab23f1ca5c6c8cc694c15b83f73",
-        "signature": "bc6f15d7d537ff6dfd7e41b5c6a0283bbd4a9694b796660d239d0fe0a1ee483b",
+        "version": "00eb892e1a15f384e51b663d11d8ee9e116050827539953bcaf81f9253fd50a9",
+        "signature": "5f9d57036b12c99e7657a10c811c05a53dd760c0ba1a7ba38ab6b75dbd0fbcba",
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/dashboard.module.ts": {
-        "version": "eb4ddd2bc3b54a165b6d3e87eeaf94ab7eee53b3c88025c62439d11f13dc5a7a",
+        "version": "cafbca1e9de67524e9337d6ac9951d3394d282a868f95fa2f531f1ed7b9accaf",
         "signature": "7dfc0dea2801af122d19df735dd15d7bb9f5b594eda3e867cb357dd6d786c30a",
         "affectsGlobalScope": false
       },
@@ -4566,7 +4586,7 @@
       "configFilePath": "./tsconfig.build.json"
     },
     "referencedMap": {
-      "./migration/1609886543596-userentity.ts": [
+      "./migration/1610059740956-userentity.ts": [
         "./node_modules/typeorm/index.d.ts"
       ],
       "./node_modules/@babel/parser/typings/babel-parser.d.ts": [
@@ -7821,6 +7841,7 @@
       ],
       "./src/entities.ts": [
         "./src/modules/auth/entities/user.entity.ts",
+        "./src/modules/dashboard/entities/budget.entity.ts",
         "./src/modules/dashboard/entities/category-template.entity.ts",
         "./src/modules/dashboard/entities/category.entity.ts",
         "./src/modules/dashboard/entities/child-category.entity.ts"
@@ -7906,6 +7927,7 @@
         "./node_modules/@types/bcryptjs/index.d.ts",
         "./node_modules/@types/uuid/index.d.ts",
         "./node_modules/typeorm/index.d.ts",
+        "./src/modules/dashboard/entities/budget.entity.ts",
         "./src/modules/dashboard/entities/category-template.entity.ts"
       ],
       "./src/modules/auth/exceptions/email-not-confirmed.exception.ts": [
@@ -7943,28 +7965,27 @@
         "./node_modules/@nestjs/swagger/index.d.ts",
         "./src/modules/auth/decorators/user.decorator.ts",
         "./src/modules/auth/entities/user.entity.ts",
-        "./src/modules/dashboard/dashboard.service.ts",
-        "./src/modules/dashboard/entities/category-template.entity.ts"
+        "./src/modules/dashboard/entities/budget.entity.ts",
+        "./src/modules/dashboard/entities/category-template.entity.ts",
+        "./src/modules/dashboard/services/budgets/budgets.service.ts",
+        "./src/modules/dashboard/services/category-template/category-template.service.ts"
       ],
       "./src/modules/dashboard/dashboard.module.ts": [
         "./node_modules/@nestjs/common/index.d.ts",
         "./node_modules/@nestjs/typeorm/index.d.ts",
         "./src/modules/dashboard/dashboard.controller.ts",
-        "./src/modules/dashboard/dashboard.service.ts",
+        "./src/modules/dashboard/entities/budget.entity.ts",
         "./src/modules/dashboard/entities/category-template.entity.ts",
         "./src/modules/dashboard/entities/category.entity.ts",
-        "./src/modules/dashboard/entities/child-category.entity.ts"
+        "./src/modules/dashboard/entities/child-category.entity.ts",
+        "./src/modules/dashboard/services/budgets/budgets.service.ts",
+        "./src/modules/dashboard/services/category-template/category-template.service.ts"
       ],
-      "./src/modules/dashboard/dashboard.service.ts": [
-        "./node_modules/@nestjs/common/index.d.ts",
-        "./node_modules/@nestjs/typeorm/index.d.ts",
-        "./node_modules/class-transformer/index.d.ts",
+      "./src/modules/dashboard/entities/budget.entity.ts": [
+        "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts",
         "./node_modules/typeorm/index.d.ts",
         "./src/modules/auth/entities/user.entity.ts",
-        "./src/modules/dashboard/entities/category-template.entity.ts",
-        "./src/modules/dashboard/exceptions/category-not-found.exception.ts",
-        "./src/modules/dashboard/exceptions/no-templates.exception.ts",
-        "./src/modules/dashboard/exceptions/template-not-found.exception.ts"
+        "./src/modules/dashboard/enums/budget-status.enum.ts"
       ],
       "./src/modules/dashboard/entities/category-template.entity.ts": [
         "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts",
@@ -7989,6 +8010,9 @@
       "./src/modules/dashboard/exceptions/category-not-found.exception.ts": [
         "./node_modules/@nestjs/common/index.d.ts"
       ],
+      "./src/modules/dashboard/exceptions/no-budgets.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
+      ],
       "./src/modules/dashboard/exceptions/no-templates.exception.ts": [
         "./node_modules/@nestjs/common/index.d.ts"
       ],
@@ -8000,6 +8024,25 @@
       ],
       "./src/modules/dashboard/exceptions/user-not-found.exception.ts": [
         "./node_modules/@nestjs/common/index.d.ts"
+      ],
+      "./src/modules/dashboard/services/budgets/budgets.service.ts": [
+        "./node_modules/@nestjs/common/index.d.ts",
+        "./node_modules/@nestjs/typeorm/index.d.ts",
+        "./node_modules/typeorm/index.d.ts",
+        "./src/modules/auth/entities/user.entity.ts",
+        "./src/modules/dashboard/entities/budget.entity.ts",
+        "./src/modules/dashboard/exceptions/no-budgets.exception.ts"
+      ],
+      "./src/modules/dashboard/services/category-template/category-template.service.ts": [
+        "./node_modules/@nestjs/common/index.d.ts",
+        "./node_modules/@nestjs/typeorm/index.d.ts",
+        "./node_modules/class-transformer/index.d.ts",
+        "./node_modules/typeorm/index.d.ts",
+        "./src/modules/auth/entities/user.entity.ts",
+        "./src/modules/dashboard/entities/category-template.entity.ts",
+        "./src/modules/dashboard/exceptions/category-not-found.exception.ts",
+        "./src/modules/dashboard/exceptions/no-templates.exception.ts",
+        "./src/modules/dashboard/exceptions/template-not-found.exception.ts"
       ],
       "./src/modules/mailer/dto/confirmation-email.dto.ts": [
         "./node_modules/class-validator/types/index.d.ts"
@@ -8042,7 +8085,7 @@
       ]
     },
     "exportedModulesMap": {
-      "./migration/1609886543596-userentity.ts": [
+      "./migration/1610059740956-userentity.ts": [
         "./node_modules/typeorm/index.d.ts"
       ],
       "./node_modules/@babel/parser/typings/babel-parser.d.ts": [
@@ -11282,6 +11325,7 @@
       ],
       "./src/entities.ts": [
         "./src/modules/auth/entities/user.entity.ts",
+        "./src/modules/dashboard/entities/budget.entity.ts",
         "./src/modules/dashboard/entities/category-template.entity.ts",
         "./src/modules/dashboard/entities/category.entity.ts",
         "./src/modules/dashboard/entities/child-category.entity.ts"
@@ -11313,6 +11357,7 @@
         "./src/modules/auth/entities/user.entity.ts"
       ],
       "./src/modules/auth/entities/user.entity.ts": [
+        "./src/modules/dashboard/entities/budget.entity.ts",
         "./src/modules/dashboard/entities/category-template.entity.ts"
       ],
       "./src/modules/auth/exceptions/email-not-confirmed.exception.ts": [
@@ -11344,13 +11389,14 @@
       ],
       "./src/modules/dashboard/dashboard.controller.ts": [
         "./src/modules/auth/entities/user.entity.ts",
-        "./src/modules/dashboard/dashboard.service.ts",
-        "./src/modules/dashboard/entities/category-template.entity.ts"
+        "./src/modules/dashboard/entities/budget.entity.ts",
+        "./src/modules/dashboard/entities/category-template.entity.ts",
+        "./src/modules/dashboard/services/budgets/budgets.service.ts",
+        "./src/modules/dashboard/services/category-template/category-template.service.ts"
       ],
-      "./src/modules/dashboard/dashboard.service.ts": [
-        "./node_modules/typeorm/index.d.ts",
+      "./src/modules/dashboard/entities/budget.entity.ts": [
         "./src/modules/auth/entities/user.entity.ts",
-        "./src/modules/dashboard/entities/category-template.entity.ts"
+        "./src/modules/dashboard/enums/budget-status.enum.ts"
       ],
       "./src/modules/dashboard/entities/category-template.entity.ts": [
         "./src/modules/auth/entities/user.entity.ts",
@@ -11366,6 +11412,9 @@
       "./src/modules/dashboard/exceptions/category-not-found.exception.ts": [
         "./node_modules/@nestjs/common/index.d.ts"
       ],
+      "./src/modules/dashboard/exceptions/no-budgets.exception.ts": [
+        "./node_modules/@nestjs/common/index.d.ts"
+      ],
       "./src/modules/dashboard/exceptions/no-templates.exception.ts": [
         "./node_modules/@nestjs/common/index.d.ts"
       ],
@@ -11377,6 +11426,16 @@
       ],
       "./src/modules/dashboard/exceptions/user-not-found.exception.ts": [
         "./node_modules/@nestjs/common/index.d.ts"
+      ],
+      "./src/modules/dashboard/services/budgets/budgets.service.ts": [
+        "./node_modules/typeorm/index.d.ts",
+        "./src/modules/auth/entities/user.entity.ts",
+        "./src/modules/dashboard/entities/budget.entity.ts"
+      ],
+      "./src/modules/dashboard/services/category-template/category-template.service.ts": [
+        "./node_modules/typeorm/index.d.ts",
+        "./src/modules/auth/entities/user.entity.ts",
+        "./src/modules/dashboard/entities/category-template.entity.ts"
       ],
       "./src/modules/mailer/mailer.controller.ts": [
         "./src/modules/auth/models/user.interface.ts",
@@ -11396,7 +11455,7 @@
       ]
     },
     "semanticDiagnosticsPerFile": [
-      "./migration/1609886543596-userentity.ts",
+      "./migration/1610059740956-userentity.ts",
       "./node_modules/@babel/parser/typings/babel-parser.d.ts",
       "./node_modules/@babel/types/lib/index.d.ts",
       "./node_modules/@nestjs/common/cache/cache.constants.d.ts",
@@ -12289,15 +12348,19 @@
       "./src/modules/auth/user.jwt.strategy.ts",
       "./src/modules/dashboard/dashboard.controller.ts",
       "./src/modules/dashboard/dashboard.module.ts",
-      "./src/modules/dashboard/dashboard.service.ts",
+      "./src/modules/dashboard/entities/budget.entity.ts",
       "./src/modules/dashboard/entities/category-template.entity.ts",
       "./src/modules/dashboard/entities/category.entity.ts",
       "./src/modules/dashboard/entities/child-category.entity.ts",
+      "./src/modules/dashboard/enums/budget-status.enum.ts",
       "./src/modules/dashboard/exceptions/category-not-found.exception.ts",
+      "./src/modules/dashboard/exceptions/no-budgets.exception.ts",
       "./src/modules/dashboard/exceptions/no-templates.exception.ts",
       "./src/modules/dashboard/exceptions/template-name-already-taken.exception.ts",
       "./src/modules/dashboard/exceptions/template-not-found.exception.ts",
       "./src/modules/dashboard/exceptions/user-not-found.exception.ts",
+      "./src/modules/dashboard/services/budgets/budgets.service.ts",
+      "./src/modules/dashboard/services/category-template/category-template.service.ts",
       "./src/modules/mailer/dto/confirmation-email.dto.ts",
       "./src/modules/mailer/dto/user-email.dto.ts",
       "./src/modules/mailer/mailer.controller.ts",

@@ -3,6 +3,7 @@ import { v4 as uuid4 } from 'uuid';
 import * as bcrypt from 'bcryptjs';
 import { CategoryTemplateEntity } from '../../dashboard/entities/category-template.entity';
 import { ApiModelProperty } from '@nestjs/swagger/dist/decorators/api-model-property.decorator';
+import { BudgetEntity } from '../../dashboard/entities/budget.entity';
 
 @Entity()
 export class UserEntity {
@@ -41,6 +42,16 @@ export class UserEntity {
     },
   )
   categoryTemplates: CategoryTemplateEntity[];
+
+  @OneToMany(
+    () => BudgetEntity,
+    (budgetEntity) => budgetEntity.user,
+    {
+      cascade: true,
+      onDelete: 'CASCADE'
+    },
+  )
+  budgets: BudgetEntity[];
 
   constructor() {
     this.id = uuid4();

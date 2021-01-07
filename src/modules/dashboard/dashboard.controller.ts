@@ -7,16 +7,37 @@ import {
   Post,
   UseGuards,
 } from '@nestjs/common';
-import { DashboardService } from './dashboard.service';
+import { CategoryTemplateService } from './services/category-template/category-template.service';
 import { AuthGuard } from '@nestjs/passport';
 import { ApiResponse } from '@nestjs/swagger';
 import { CategoryTemplateEntity } from './entities/category-template.entity';
 import { UserDecorator } from '../auth/decorators/user.decorator';
 import { UserEntity } from '../auth/entities/user.entity';
+import { BudgetEntity } from './entities/budget.entity';
+import { BudgetsService } from './services/budgets/budgets.service';
 
 @Controller('dashboard')
 export class DashboardController {
-  constructor(private readonly dashboardService: DashboardService) {}
+  constructor(
+    private readonly categoryTemplateService: CategoryTemplateService,
+    private readonly budgetsService: BudgetsService,
+  ) {}
+
+  /* Categories */
+  @Get('templates')
+  @UseGuards(AuthGuard('User'))
+  @ApiResponse({
+    status: 200,
+    description: 'List of templates received',
+    isArray: true,
+  })
+  @ApiResponse({
+    status: 404,
+    description: 'You have no templates already',
+  })
+  async getUserTemplates(@UserDecorator() user: UserEntity): Promise<string[]> {
+    return this.categoryTemplateService.getUserTemplates(user);
+  }
 
   @Get('categories/:templateName')
   @UseGuards(AuthGuard('User'))
@@ -28,7 +49,7 @@ export class DashboardController {
   async getCategories(
     @Param('templateName') templateName: string,
   ): Promise<CategoryTemplateEntity> {
-    return this.dashboardService.getUserCategories(templateName);
+    return this.categoryTemplateService.getUserCategories(templateName);
   }
 
   @Post('categoryTemplate')
@@ -46,22 +67,7 @@ export class DashboardController {
     @Body() category: CategoryTemplateEntity,
     @UserDecorator() user: UserEntity,
   ): Promise<CategoryTemplateEntity> {
-    return this.dashboardService.createCategoryTemplate(category, user);
-  }
-
-  @Get('templates')
-  @UseGuards(AuthGuard('User'))
-  @ApiResponse({
-    status: 200,
-    description: 'List of templates received',
-    isArray: true,
-  })
-  @ApiResponse({
-    status: 404,
-    description: 'You have no templates already',
-  })
-  async getUserTemplates(@UserDecorator() user: UserEntity): Promise<string[]> {
-    return this.dashboardService.getUserTemplates(user);
+    return this.categoryTemplateService.createCategoryTemplate(category, user);
   }
 
   @Delete('template/:id')
@@ -78,6 +84,25 @@ export class DashboardController {
     @Param('id') templateId: string,
     @UserDecorator() user: UserEntity,
   ): Promise<CategoryTemplateEntity> {
-    return this.dashboardService.deleteUserTemplate(user, templateId);
+    return this.categoryTemplateService.deleteUserTemplate(user, templateId);
+  }
+
+  /* Budgets */
+  @Get('budgets')
+  @UseGuards(AuthGuard('User'))
+  @ApiResponse({
+    status: 200,
+    description: 'List of budgets',
+    type: BudgetEntity,
+    isArray: true,
+  })
+  @ApiResponse({
+    status: 404,
+    description: 'You have no budgets already',
+  })
+  async getUserBudgets(
+    @UserDecorator() user: UserEntity,
+  ): Promise<BudgetEntity[]> {
+    return this.budgetsService.getUserBudgets(user);
   }
 }
