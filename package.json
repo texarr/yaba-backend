@@ -23,7 +23,8 @@
     "migration:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate -n UserEntity",
     "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run",
     "migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert",
-    "fixtures:dev": "fixtures ./fixtures/dev --config ./.env --require ts-node/register"
+    "fixtures:dev": "fixtures ./fixtures/dev --config ./.env --require ts-node/register",
+    "db:up": "migration:generate && migration:run && fixtures:dev"
   },
   "dependencies": {
     "@nestjs/common": "^7.5.1",
