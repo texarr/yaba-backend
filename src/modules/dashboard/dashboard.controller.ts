@@ -15,6 +15,7 @@ import { UserDecorator } from '../auth/decorators/user.decorator';
 import { UserEntity } from '../auth/entities/user.entity';
 import { BudgetEntity } from './entities/budget.entity';
 import { BudgetsService } from './services/budgets/budgets.service';
+import { BudgetResponseModel } from './models/budget-response.model';
 
 @Controller('dashboard')
 export class DashboardController {
@@ -93,7 +94,7 @@ export class DashboardController {
   @ApiResponse({
     status: 200,
     description: 'List of budgets',
-    type: BudgetEntity,
+    type: BudgetResponseModel,
     isArray: true,
   })
   @ApiResponse({
@@ -104,5 +105,57 @@ export class DashboardController {
     @UserDecorator() user: UserEntity,
   ): Promise<BudgetEntity[]> {
     return this.budgetsService.getUserBudgets(user);
+  }
+
+  @Post('budgets')
+  @UseGuards(AuthGuard('User'))
+  @ApiResponse({
+    status: 201,
+    description: 'Added new budget',
+    type: BudgetResponseModel,
+  })
+  @ApiResponse({
+    status: 400,
+    description: 'Budget already exists',
+  })
+  async addUserBudgets(
+    @UserDecorator() user: UserEntity,
+    @Body() budget: BudgetEntity,
+  ): Promise<BudgetEntity> {
+    return this.budgetsService.addUserBudgets(user, budget);
+  }
+
+  @Delete('budgets/:id')
+  @UseGuards(AuthGuard('User'))
+  @ApiResponse({
+    status: 200,
+    description: 'Budget removed',
+  })
+  @ApiResponse({
+    status: 400,
+    description: 'Budget not found'
+  })
+  async removeBudget(
+    @Param('id') budgetId: string,
+    @UserDecorator() user: UserEntity,
+  ): Promise<BudgetEntity> {
+    return this.budgetsService.removeBudget(user, budgetId);
+  }
+
+  @Get('budgets/:id')
+  @UseGuards(AuthGuard('User'))
+  @ApiResponse({
+    status: 200,
+    description: 'Budget details',
+  })
+  @ApiResponse({
+    status: 400,
+    description: 'Budget not found'
+  })
+  async getSelectedBudget(
+    @Param('id') budgetId: string,
+    @UserDecorator() user: UserEntity,
+  ): Promise<BudgetEntity> {
+    return this.budgetsService.getOneBudget(user, budgetId);
   }
 }

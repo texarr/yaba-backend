@@ -6,13 +6,12 @@ import { UserEntity } from '../../auth/entities/user.entity';
 @Entity()
 export class BudgetEntity {
   @PrimaryGeneratedColumn()
-  id: string;
+  budgetId: string;
 
   @ApiModelProperty()
   @Column()
   name: string;
 
-  @ApiModelProperty()
   @Column()
   status: BudgetStatusEnum;
 
@@ -20,6 +19,14 @@ export class BudgetEntity {
   @Column()
   year: number;
 
+  @Column()
+  isActive: boolean;
+
   @ManyToOne(() => UserEntity, (user) => user.budgets)
-  user: UserEntity;
+  user?: UserEntity;
+
+  constructor() {
+    this.status = BudgetStatusEnum.new;
+    this.isActive = true;
+  }
 }
