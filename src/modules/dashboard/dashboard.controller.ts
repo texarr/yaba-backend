@@ -133,7 +133,7 @@ export class DashboardController {
   })
   @ApiResponse({
     status: 400,
-    description: 'Budget not found'
+    description: 'Budget not found',
   })
   async removeBudget(
     @Param('id') budgetId: string,
@@ -147,10 +147,11 @@ export class DashboardController {
   @ApiResponse({
     status: 200,
     description: 'Budget details',
+    type: BudgetResponseModel,
   })
   @ApiResponse({
     status: 400,
-    description: 'Budget not found'
+    description: 'Budget not found',
   })
   async getSelectedBudget(
     @Param('id') budgetId: string,

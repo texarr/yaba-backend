@@ -4092,7 +4092,7 @@
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/dashboard.controller.ts": {
-        "version": "aae917ae74ffb67d910dff0893cec6213605646e9c60965873bebaf06c7a8b68",
+        "version": "86a71e1f5a64e097b5e82944b63ad3b661134a67203a486315b5372eba3dda07",
         "signature": "203a8de643de3eda0e69214f04533da4bf4636451610f5105e08b98b4b0f1336",
         "affectsGlobalScope": false
       },
