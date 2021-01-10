@@ -36,6 +36,7 @@ export class BudgetsService {
       user: user,
       name: newBudget.name,
       year: newBudget.year,
+      isActive: true,
     });
 
     if (existingBudget) {

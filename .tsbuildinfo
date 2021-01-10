@@ -4052,7 +4052,7 @@
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/exceptions/no-templates.exception.ts": {
-        "version": "8fe45d8e7dfdaf9bc97d07e2b95e1bd236d718605993df370c759a4ecfbb1452",
+        "version": "8d10dcf8f1f159a81a41c1d6fced79c7d8c92ef2ba8d135ebd929994b4ae859a",
         "signature": "e12d7618271a90a1fa7fec57bf8a81f3ec00af0833af427d63dad19ed72d8c94",
         "affectsGlobalScope": false
       },
@@ -4067,7 +4067,7 @@
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/exceptions/no-budgets.exception.ts": {
-        "version": "63a547ea91a0b768fbfb574dda07c9153d7cf07975278f87a0eb7f6251c6bcc3",
+        "version": "2ea51aab15339e54e933307a25de4d52a87c1d491859e1ba764f30b55db699d2",
         "signature": "106de3b195d2868f279e002a401bf0fd1f81a732002d20844f09be24c68baab9",
         "affectsGlobalScope": false
       },
@@ -4082,13 +4082,13 @@
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/services/budgets/budgets.service.ts": {
-        "version": "bcba698ebcdcabeee4ff7fed82e7078960071d9f2b6c0d36662ec76de4e02720",
+        "version": "ad2b8258fad7f8add10726d21d8bb0c6625c7cb84e367c3d347b41603746375c",
         "signature": "5a2c976282fcdc89c5391fcb48ebeabfe328fed375a00c64dfe6ff097a41760b",
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/models/budget-response.model.ts": {
-        "version": "0d4126c5b05dd3dce6febed2ef99e6dc005596635b0df197315b4a55e0a49afe",
-        "signature": "ad0b48ad66a09bba6776812acdb0129607f7dfb6de5010bff5ab0857dc245d42",
+        "version": "337615b47a329dfc68c9b0d509c818ccf967a1565af8ea79c4faf75e427baa82",
+        "signature": "4aa7f363bf217eb6bb4750fdf0e973f894b5e88c44f82cedf1eb97f29113cc85",
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/dashboard.controller.ts": {

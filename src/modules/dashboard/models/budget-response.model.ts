@@ -3,7 +3,7 @@ import { BudgetStatusEnum } from '../enums/budget-status.enum';
 
 export class BudgetResponseModel {
   @ApiModelProperty()
-  id: string;
+  budgetId: string;
 
   @ApiModelProperty()
   name: string;
