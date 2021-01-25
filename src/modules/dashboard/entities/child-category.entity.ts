@@ -14,15 +14,21 @@ export class ChildCategoryEntity {
   name: string;
 
   @ApiModelProperty()
-  @Column()
+  @Column({
+    nullable: true,
+  })
   incomes: number;
 
   @ApiModelProperty()
-  @Column()
+  @Column({
+    nullable: true,
+  })
   expenses: number;
 
   @ApiModelProperty()
-  @Column()
+  @Column({
+    nullable: true,
+  })
   deficitOrSurplus: number;
 
   @ApiModelProperty()

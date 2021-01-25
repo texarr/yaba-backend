@@ -20,17 +20,24 @@ export class CategoryTemplateEntity {
   @Column()
   templateName: string;
 
+  @ApiModelProperty()
   @Column()
   isActive: boolean;
 
   @ApiModelProperty()
   @ApiProperty({ type: () => CategoryEntity, isArray: true })
-  @OneToMany(() => CategoryEntity, (category) => category.incomeCategories)
+  @OneToMany(() => CategoryEntity, (category) => category.incomeCategories, {
+    cascade: true,
+    onDelete: 'CASCADE',
+  })
   incomes: CategoryEntity[];
 
   @ApiModelProperty()
   @ApiProperty({ type: () => CategoryEntity, isArray: true })
-  @OneToMany(() => CategoryEntity, (category) => category.outcomeCategories)
+  @OneToMany(() => CategoryEntity, (category) => category.outcomeCategories, {
+    cascade: true,
+    onDelete: 'CASCADE',
+  })
   outcomes: CategoryEntity[];
 
   @ApiModelProperty()

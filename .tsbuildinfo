@@ -1456,9 +1456,14 @@
         "signature": "65916fb178938c9fb2c0588cf5447f5b5de992d50d0e308d6b2169a027fa9dd5",
         "affectsGlobalScope": false
       },
-      "./migration/1611553653273-migration.ts": {
-        "version": "414ce07b449d565c300c8e47905e365362e918e72dcd3eae101fc6157cc04de7",
-        "signature": "ab8e2b9b69ad9c2c457dd142af1f07b1e3d446d04f9a73962ca7bb7f5aa0e823",
+      "./migration/1611596054792-migration.ts": {
+        "version": "fa276ae37b4b6d5bc6b806c6f2b17a6cf292c6cabf84b53517e933ce0fb46b41",
+        "signature": "d0d49da2a07a5888f88f72b43c03e40093323bac658382f3a11154bbaeef0918",
+        "affectsGlobalScope": false
+      },
+      "./migration/1611596870565-migration.ts": {
+        "version": "460da7281f5a0dc4e7884753cbf668895d4c65605b494888c12248c8373bd3ab",
+        "signature": "6a17b8dcb0f696239a8957a5335160f2f2c9c8949cbc458b1cdcdd7d5963ab67",
         "affectsGlobalScope": false
       },
       "./node_modules/@nestjs/common/cache/cache.constants.d.ts": {
@@ -2727,7 +2732,7 @@
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/entities/child-category.entity.ts": {
-        "version": "c63b287dbbb8af1fce6932aa026e9b0c1ac8b0ab69c204644dcd1c85d0ef5395",
+        "version": "db9d09f9105fe325e1623f2fd7786e0f59d811de3f1d1c63bd1431e2cd300e75",
         "signature": "aa0fa7575a7f5f43831712a17efd963f29df601cb02b9c1c9b097ee87c5b8446",
         "affectsGlobalScope": false
       },
@@ -2747,7 +2752,7 @@
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/entities/category-template.entity.ts": {
-        "version": "02660bbf02ab209ad64ba4600fa963e0b938c8823f77007c1c7e8c4aff617174",
+        "version": "e47908350fc58ef09d0594429955cad19fa1066e349e2cd34bb25171c59eea17",
         "signature": "3b2674a55fba9322888ca30f4d47a3244591e5dcb165a08f283be0afa1eea55a",
         "affectsGlobalScope": false
       },
@@ -3372,7 +3377,7 @@
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/entities/budget.entity.ts": {
-        "version": "1f08b4c8759ac6cb7600d1606168b12453bd58f3fe31f12efa68202f4882e7d5",
+        "version": "eb0592c054c66cae45a96286b90417d22783096ea58070eee42fb8b3893cc9e9",
         "signature": "3ba6e4285cf2f4d16b61e3d7651ba2b4c654a2b20d6348ab2b8c8859695d3b3c",
         "affectsGlobalScope": false
       },
@@ -4062,7 +4067,7 @@
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/services/category-template/category-template.service.ts": {
-        "version": "131b92f96bb885d2a5661d07b2a92473904ec575a8df3c377e4b9a7be842efc1",
+        "version": "f0cfa6b31410b5399ab1909432af3b7b9979b5cf31638cb7b505ae00706023d8",
         "signature": "bc24f0bf95d0aace0a35329c6db6628242b9230268dbd12b839a7168ceb4e725",
         "affectsGlobalScope": false
       },
@@ -4611,7 +4616,10 @@
       "configFilePath": "./tsconfig.build.json"
     },
     "referencedMap": {
-      "./migration/1611553653273-migration.ts": [
+      "./migration/1611596054792-migration.ts": [
+        "./node_modules/typeorm/index.d.ts"
+      ],
+      "./migration/1611596870565-migration.ts": [
         "./node_modules/typeorm/index.d.ts"
       ],
       "./node_modules/@babel/parser/typings/babel-parser.d.ts": [
@@ -8027,6 +8035,7 @@
       "./src/modules/dashboard/entities/budget.entity.ts": [
         "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts",
         "./node_modules/@nestjs/swagger/index.d.ts",
+        "./node_modules/@types/uuid/index.d.ts",
         "./node_modules/class-validator/types/index.d.ts",
         "./node_modules/typeorm/index.d.ts",
         "./src/modules/auth/entities/user.entity.ts",
@@ -8145,7 +8154,10 @@
       ]
     },
     "exportedModulesMap": {
-      "./migration/1611553653273-migration.ts": [
+      "./migration/1611596054792-migration.ts": [
+        "./node_modules/typeorm/index.d.ts"
+      ],
+      "./migration/1611596870565-migration.ts": [
         "./node_modules/typeorm/index.d.ts"
       ],
       "./node_modules/@babel/parser/typings/babel-parser.d.ts": [
@@ -11535,7 +11547,8 @@
       ]
     },
     "semanticDiagnosticsPerFile": [
-      "./migration/1611553653273-migration.ts",
+      "./migration/1611596054792-migration.ts",
+      "./migration/1611596870565-migration.ts",
       "./node_modules/@babel/parser/typings/babel-parser.d.ts",
       "./node_modules/@babel/types/lib/index.d.ts",
       "./node_modules/@nestjs/common/cache/cache.constants.d.ts",

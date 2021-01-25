@@ -5,6 +5,7 @@ import { UserEntity } from '../../auth/entities/user.entity';
 import { IsOptional } from 'class-validator';
 import { BudgetMonthEntity } from './budget-month.entity';
 import { ApiProperty } from '@nestjs/swagger';
+import { v4 as uuid4 } from 'uuid';
 
 @Entity()
 export class BudgetEntity {
@@ -52,5 +53,6 @@ export class BudgetEntity {
   constructor() {
     this.status = BudgetStatusEnum.new;
     this.isActive = true;
+    this.budgetId = uuid4();
   }
 }

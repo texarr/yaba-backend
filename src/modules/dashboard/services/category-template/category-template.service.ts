@@ -26,6 +26,7 @@ export class CategoryTemplateService {
           'outcomes',
           'incomes.childCategories',
           'outcomes.childCategories',
+          'months',
         ],
       },
     );
