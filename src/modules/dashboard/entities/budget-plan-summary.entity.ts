@@ -1,17 +1,13 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { ApiModelProperty } from '@nestjs/swagger/dist/decorators/api-model-property.decorator';
-import { CategoryEntity } from './category.entity';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { BudgetMonthEntity } from './budget-month.entity';
 import { ApiProperty } from '@nestjs/swagger';
 
 @Entity()
-export class ChildCategoryEntity {
+export class BudgetPlanSummaryEntity {
   @ApiModelProperty()
   @PrimaryGeneratedColumn()
   id: string;
-
-  @ApiModelProperty()
-  @Column()
-  name: string;
 
   @ApiModelProperty()
   @Column()
@@ -26,7 +22,7 @@ export class ChildCategoryEntity {
   deficitOrSurplus: number;
 
   @ApiModelProperty()
-  @ApiProperty({ type: () => CategoryEntity })
-  @ManyToOne(() => CategoryEntity, (category) => category.childCategories)
-  category: CategoryEntity;
+  @ApiProperty({ type: () => BudgetMonthEntity })
+  @ManyToOne(() => BudgetMonthEntity, (budgetMonth) => budgetMonth.monthSummary)
+  summary: BudgetMonthEntity;
 }

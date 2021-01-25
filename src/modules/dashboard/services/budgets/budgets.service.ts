@@ -49,6 +49,8 @@ export class BudgetsService {
 
     await this.saveBudget(budget);
 
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     delete budget.user;
 
     return budget;

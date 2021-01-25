@@ -7,6 +7,8 @@ import { ChildCategoryEntity } from './entities/child-category.entity';
 import { CategoryEntity } from './entities/category.entity';
 import { BudgetsService } from './services/budgets/budgets.service';
 import { BudgetEntity } from './entities/budget.entity';
+import { BudgetMonthEntity } from './entities/budget-month.entity';
+import { BudgetPlanSummaryEntity } from './entities/budget-plan-summary.entity';
 
 @Module({
   imports: [
@@ -15,6 +17,8 @@ import { BudgetEntity } from './entities/budget.entity';
       CategoryTemplateEntity,
       ChildCategoryEntity,
       BudgetEntity,
+      BudgetMonthEntity,
+      BudgetPlanSummaryEntity,
     ]),
   ],
   controllers: [DashboardController],

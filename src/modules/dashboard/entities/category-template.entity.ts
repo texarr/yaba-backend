@@ -9,6 +9,7 @@ import { ApiModelProperty } from '@nestjs/swagger/dist/decorators/api-model-prop
 import { CategoryEntity } from './category.entity';
 import { ApiProperty } from '@nestjs/swagger';
 import { UserEntity } from '../../auth/entities/user.entity';
+import { BudgetMonthEntity } from './budget-month.entity';
 
 @Entity()
 export class CategoryTemplateEntity {
@@ -23,23 +24,27 @@ export class CategoryTemplateEntity {
   isActive: boolean;
 
   @ApiModelProperty()
-  @OneToMany(() => CategoryEntity, (category) => category.incomeCategories, {
-    cascade: true,
-    onDelete: 'CASCADE',
-  })
   @ApiProperty({ type: () => CategoryEntity, isArray: true })
+  @OneToMany(() => CategoryEntity, (category) => category.incomeCategories)
   incomes: CategoryEntity[];
 
   @ApiModelProperty()
-  @OneToMany(() => CategoryEntity, (category) => category.outcomeCategories, {
-    cascade: true,
-    onDelete: 'CASCADE',
-  })
   @ApiProperty({ type: () => CategoryEntity, isArray: true })
+  @OneToMany(() => CategoryEntity, (category) => category.outcomeCategories)
   outcomes: CategoryEntity[];
 
+  @ApiModelProperty()
+  @ApiProperty({ type: () => UserEntity })
   @ManyToOne(() => UserEntity, (user) => user.categoryTemplates)
   user: UserEntity;
+
+  @ApiModelProperty()
+  @ApiProperty({ type: () => CategoryEntity, isArray: true })
+  @OneToMany(
+    () => BudgetMonthEntity,
+    (budgetMonth) => budgetMonth.monthCategory,
+  )
+  months: BudgetMonthEntity[];
 
   constructor() {
     this.isActive = true;

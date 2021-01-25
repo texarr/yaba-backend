@@ -54,11 +54,12 @@ export class MailerService {
   async sendAccountConfirmationEmail(
     confirmationEmailDto: ConfirmationEmailDto,
   ) {
-    // todo: write readable confirmation mail template
+    // todo: handle multilanguage mail templates
     const text = `Witaj: ${confirmationEmailDto.name}
-    Skopiuj ten adres w celu weryfikacji konta: ${process.env.APP_BASE_URL}/auth/confirm/${confirmationEmailDto.confirmationToken}`;
+    Wklej ten adres w przeglądarce w celu weryfikacji konta: ${process.env.APP_BASE_URL}/auth/confirm/${confirmationEmailDto.confirmationToken}`;
 
     const html = `<p>Witaj: ${confirmationEmailDto.name}</p>
+    <p>Dziękujemy za założenie konta, aby potwierdzić konto naciśnij poniższy link:</p>
     <br/><a href="${process.env.APP_BASE_URL}/auth/confirm/${confirmationEmailDto.confirmationToken}">${process.env.APP_BASE_URL}/auth/confirm/${confirmationEmailDto.confirmationToken}</a>`;
 
     await this.sendEmail(

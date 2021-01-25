@@ -36,21 +36,10 @@ export class UserEntity {
   @OneToMany(
     () => CategoryTemplateEntity,
     (categoryTemplate) => categoryTemplate.user,
-    {
-      cascade: true,
-      onDelete: 'CASCADE',
-    },
   )
   categoryTemplates: CategoryTemplateEntity[];
 
-  @OneToMany(
-    () => BudgetEntity,
-    (budgetEntity) => budgetEntity.user,
-    {
-      cascade: true,
-      onDelete: 'CASCADE'
-    },
-  )
+  @OneToMany(() => BudgetEntity, (budgetEntity) => budgetEntity.user)
   budgets: BudgetEntity[];
 
   constructor() {
