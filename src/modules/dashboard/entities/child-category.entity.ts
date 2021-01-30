@@ -6,7 +6,7 @@ import { ApiProperty } from '@nestjs/swagger';
 @Entity()
 export class ChildCategoryEntity {
   @ApiModelProperty()
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @ApiModelProperty()

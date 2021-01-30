@@ -64,7 +64,7 @@ export class CategoryTemplateService {
     templateId: string,
   ): Promise<CategoryTemplateEntity> {
     const existingTemplate = await this.categoryRepository.findOne({
-      templateId: templateId,
+      id: templateId,
       user: user,
       isActive: true,
     });

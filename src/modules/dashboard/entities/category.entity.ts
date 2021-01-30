@@ -12,7 +12,7 @@ import { CategoryTemplateEntity } from './category-template.entity';
 
 @Entity()
 export class CategoryEntity {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @ApiModelProperty()

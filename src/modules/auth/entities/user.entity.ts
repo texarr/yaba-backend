@@ -1,4 +1,4 @@
-import { Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { v4 as uuid4 } from 'uuid';
 import * as bcrypt from 'bcryptjs';
 import { CategoryTemplateEntity } from '../../dashboard/entities/category-template.entity';
@@ -8,7 +8,7 @@ import { BudgetEntity } from '../../dashboard/entities/budget.entity';
 @Entity()
 export class UserEntity {
   @ApiModelProperty()
-  @PrimaryColumn()
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @ApiModelProperty()
@@ -43,7 +43,6 @@ export class UserEntity {
   budgets: BudgetEntity[];
 
   constructor() {
-    this.id = uuid4();
     this.emailConfirmed = false;
     this.confirmationToken = uuid4();
   }

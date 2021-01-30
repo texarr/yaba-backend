@@ -1,23 +1,22 @@
-import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinTable,
+  ManyToMany,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { ApiModelProperty } from '@nestjs/swagger/dist/decorators/api-model-property.decorator';
 import { BudgetStatusEnum } from '../enums/budget-status.enum';
 import { UserEntity } from '../../auth/entities/user.entity';
 import { IsOptional } from 'class-validator';
 import { BudgetMonthEntity } from './budget-month.entity';
 import { ApiProperty } from '@nestjs/swagger';
-import { v4 as uuid4 } from 'uuid';
 
 @Entity()
 export class BudgetEntity {
-  @ApiModelProperty()
-  @PrimaryGeneratedColumn()
-  id: number;
-
-  @ApiModelProperty()
-  @Column({
-    unique: true,
-  })
-  budgetId: string;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @ApiModelProperty()
   @Column()
@@ -39,10 +38,10 @@ export class BudgetEntity {
 
   @ApiModelProperty()
   @ApiProperty({ type: () => BudgetMonthEntity, isArray: true })
-  @OneToMany(
-    () => BudgetMonthEntity,
-    (budgetMonthEntity) => budgetMonthEntity.monthCategory,
-  )
+  @ManyToMany(() => BudgetMonthEntity, {
+    cascade: true,
+  })
+  @JoinTable()
   months: BudgetMonthEntity[];
 
   @ApiModelProperty()
@@ -53,6 +52,5 @@ export class BudgetEntity {
   constructor() {
     this.status = BudgetStatusEnum.new;
     this.isActive = true;
-    this.budgetId = uuid4();
   }
 }

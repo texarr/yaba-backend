@@ -65,7 +65,7 @@ export class BudgetsService {
     budgetId: string,
   ): Promise<BudgetEntity> {
     const existingBudget = await this.budgetRepository.findOne({
-      budgetId: budgetId,
+      id: budgetId,
       user: user,
       isActive: true,
     });
@@ -82,11 +82,13 @@ export class BudgetsService {
     user: UserEntity,
     budgetId: string,
   ): Promise<BudgetEntity> {
-    // todo: suppose to have some many to one relations here
     const existingBudget = await this.budgetRepository.findOne({
-      budgetId: budgetId,
-      user: user,
-      isActive: true,
+      where: {
+        id: budgetId,
+        user: user,
+        isActive: true,
+      },
+      relations: ['months'],
     });
 
     if (!existingBudget) {
@@ -94,5 +96,24 @@ export class BudgetsService {
     }
 
     return existingBudget;
+  }
+
+  async patchOneBudget(
+    user: UserEntity,
+    updatedBudget: BudgetEntity,
+  ): Promise<BudgetEntity> {
+    const existingBudget = await this.budgetRepository.findOne({
+      where: {
+        user,
+        id: updatedBudget.id,
+        isActive: true,
+      },
+    });
+
+    if (!existingBudget) {
+      throw new BudgetNotFoundException();
+    }
+
+    return await this.budgetRepository.save(updatedBudget);
   }
 }

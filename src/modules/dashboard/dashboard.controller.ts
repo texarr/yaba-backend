@@ -4,6 +4,7 @@ import {
   Delete,
   Get,
   Param,
+  Patch,
   Post,
   UseGuards,
 } from '@nestjs/common';
@@ -158,5 +159,23 @@ export class DashboardController {
     @UserDecorator() user: UserEntity,
   ): Promise<BudgetEntity> {
     return this.budgetsService.getOneBudget(user, budgetId);
+  }
+
+  @Patch('budgets')
+  @UseGuards(AuthGuard('User'))
+  @ApiResponse({
+    status: 201,
+    description: 'Budget patched',
+    type: BudgetResponseModel,
+  })
+  @ApiResponse({
+    status: 400,
+    description: 'Budget not found',
+  })
+  async patchSelectedBudget(
+    @UserDecorator() user: UserEntity,
+    @Body() updatedBudget: BudgetEntity,
+  ): Promise<BudgetEntity> {
+    return this.budgetsService.patchOneBudget(user, updatedBudget);
   }
 }
