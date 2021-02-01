@@ -1456,24 +1456,9 @@
         "signature": "65916fb178938c9fb2c0588cf5447f5b5de992d50d0e308d6b2169a027fa9dd5",
         "affectsGlobalScope": false
       },
-      "./migration/1611596054792-migration.ts": {
-        "version": "fa276ae37b4b6d5bc6b806c6f2b17a6cf292c6cabf84b53517e933ce0fb46b41",
-        "signature": "d0d49da2a07a5888f88f72b43c03e40093323bac658382f3a11154bbaeef0918",
-        "affectsGlobalScope": false
-      },
-      "./migration/1611596870565-migration.ts": {
-        "version": "460da7281f5a0dc4e7884753cbf668895d4c65605b494888c12248c8373bd3ab",
-        "signature": "6a17b8dcb0f696239a8957a5335160f2f2c9c8949cbc458b1cdcdd7d5963ab67",
-        "affectsGlobalScope": false
-      },
-      "./migration/1611608591696-migration.ts": {
-        "version": "a7add7fe2640ee146acb2036fe448c4e37ef2aaecbc758d98ae894551dcf6fb0",
-        "signature": "e97a48684cdadfb8abf5fc0c7064129e795b40546f3be52cebd8447387e74215",
-        "affectsGlobalScope": false
-      },
-      "./migration/1611990113471-migration.ts": {
-        "version": "5e06d7e7bf4126ac88291ff10e29b8d093269c945f9b064e3fde9e76872f15bc",
-        "signature": "a698abc510a520b589f43bc0677e8197c4aa41967842aab584c1503d7be5005e",
+      "./migration/1612159533175-migration.ts": {
+        "version": "1b61b40b7ea634d6aa6e6320d3e59fb2645ce8a23f2271f31ef14a69e6f9c8e3",
+        "signature": "f8f2013f513e3da413a5d40e32bf5836572e4c8ea59514a23a48bda88539f22d",
         "affectsGlobalScope": false
       },
       "./node_modules/@nestjs/common/cache/cache.constants.d.ts": {
@@ -2751,11 +2736,6 @@
         "signature": "7b53bf0a7125f91aef7cb5d0e71039ba1c53375d6842c4aaffa992e6df7e3045",
         "affectsGlobalScope": false
       },
-      "./src/modules/dashboard/entities/category-template.entity.ts": {
-        "version": "0c6aa0b2c2aa89bd0f6b3089bd8a9c5f3e9c43efe03dbc1f873943ad2bfa82c2",
-        "signature": "f4ae8352134aef95eac62fed3ac26be4ad03bf5362d1d8062d10bb6588cd34b7",
-        "affectsGlobalScope": false
-      },
       "./src/modules/dashboard/enums/budget-status.enum.ts": {
         "version": "b8387ba8349aa309d78bb1683f8fcc8c5c5fd8fecdb5d72b641068b000f6afa5",
         "signature": "601d46d08fd3d721fa5361cda6aca99175dfdfe65550a6a46df9093627c8335d",
@@ -3376,14 +3356,19 @@
         "signature": "1d5f30cbd06ffa2aab22346b087e140f069851c17b91189be8d1e168d53f9f93",
         "affectsGlobalScope": false
       },
-      "./src/modules/dashboard/entities/budget-month.entity.ts": {
-        "version": "4bc1a0ae68e33843eb5e30b2af98b9bb130b6066943892e42e6221761188be60",
-        "signature": "978068ee89eeb95523e67484ba5e9a0686c4c8ea3452201dc767e8e45257c532",
+      "./src/modules/dashboard/entities/budget.entity.ts": {
+        "version": "57a1cae4426a3319120478750facacb4f32cad0d2d1519a450e4f19a12fbb336",
+        "signature": "b842c262459bec204b0ac4642ec05f318371333bfd4d0b1bdc4a9a0fc4f10cba",
         "affectsGlobalScope": false
       },
-      "./src/modules/dashboard/entities/budget.entity.ts": {
-        "version": "ba7f111dbacbab028c649f4aad27f0b0d03313ff4fa8a4e1ad986f7de7c469df",
-        "signature": "b842c262459bec204b0ac4642ec05f318371333bfd4d0b1bdc4a9a0fc4f10cba",
+      "./src/modules/dashboard/entities/budget-month.entity.ts": {
+        "version": "c308cdd82bfd695f03b924b3f70e4fd4f88bf1c99940379fc4283dc67c7a5a28",
+        "signature": "5a67d725f6354c5330caef3131294cd092885cb39f688897a9e21f5928685006",
+        "affectsGlobalScope": false
+      },
+      "./src/modules/dashboard/entities/category-template.entity.ts": {
+        "version": "b7576c1fa65763e5eab89069c9b2ddb1bd61495d2aface428293b611dd0287aa",
+        "signature": "90bfb883add466b07701acc6f7c904263dc5c3f1f308a2c9496a30120170aed3",
         "affectsGlobalScope": false
       },
       "./src/modules/auth/entities/user.entity.ts": {
@@ -3983,7 +3968,7 @@
       },
       "./src/entities.ts": {
         "version": "7fa0380d5b612706b42a7e8b8019457c14b3496ce532b614cc54fe7ab82d6659",
-        "signature": "bd7d19f6b11ac0100a149c73ed4f5f1cd8b877644257490eb5735b73ec828909",
+        "signature": "47f719b150fe0deec8644f0f25bdd4367cd4b44954e78063dee47af22555b116",
         "affectsGlobalScope": false
       },
       "./src/type-orm-config.service.ts": {
@@ -4102,8 +4087,8 @@
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/services/budgets/budgets.service.ts": {
-        "version": "08bcec9e8594522c35d02bdf7c6e135ea1ca0c55210e7cc83914f6fa05cc3272",
-        "signature": "54f68945e0dfa336d6b404505a685b671eaad20a755f8444be0f02c302f42796",
+        "version": "f19bb45157093065809d2d16151da445fc742f42ab0d3e2f77c3b4f60898de5c",
+        "signature": "64fbf00bb8967ecd4053ca3c8a42b2bd569bdf563a1f5e226e2d4c39aeda47cd",
         "affectsGlobalScope": false
       },
       "./src/modules/dashboard/models/budget-response.model.ts": {
@@ -4307,7 +4292,7 @@
         "affectsGlobalScope": false
       },
       "./src/main.ts": {
-        "version": "0886cfc253bd609791a475c8771a4ee853960f796eb9953710e465c518206b25",
+        "version": "1edb387b9c81665957fb2860c9feb2f8d811e92ec27ad7f07cf7ffa57f96bbe8",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       },
@@ -4626,16 +4611,7 @@
       "configFilePath": "./tsconfig.build.json"
     },
     "referencedMap": {
-      "./migration/1611596054792-migration.ts": [
-        "./node_modules/typeorm/index.d.ts"
-      ],
-      "./migration/1611596870565-migration.ts": [
-        "./node_modules/typeorm/index.d.ts"
-      ],
-      "./migration/1611608591696-migration.ts": [
-        "./node_modules/typeorm/index.d.ts"
-      ],
-      "./migration/1611990113471-migration.ts": [
+      "./migration/1612159533175-migration.ts": [
         "./node_modules/typeorm/index.d.ts"
       ],
       "./node_modules/@babel/parser/typings/babel-parser.d.ts": [
@@ -8038,7 +8014,9 @@
       "./src/modules/dashboard/entities/budget-month.entity.ts": [
         "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts",
         "./node_modules/@nestjs/swagger/index.d.ts",
-        "./node_modules/typeorm/index.d.ts"
+        "./node_modules/typeorm/index.d.ts",
+        "./src/modules/dashboard/entities/budget.entity.ts",
+        "./src/modules/dashboard/entities/category-template.entity.ts"
       ],
       "./src/modules/dashboard/entities/budget-plan-summary.entity.ts": [
         "./node_modules/@nestjs/swagger/dist/decorators/api-model-property.decorator.d.ts",
@@ -8058,6 +8036,7 @@
         "./node_modules/@nestjs/swagger/index.d.ts",
         "./node_modules/typeorm/index.d.ts",
         "./src/modules/auth/entities/user.entity.ts",
+        "./src/modules/dashboard/entities/budget-month.entity.ts",
         "./src/modules/dashboard/entities/category.entity.ts"
       ],
       "./src/modules/dashboard/entities/category.entity.ts": [
@@ -8165,16 +8144,7 @@
       ]
     },
     "exportedModulesMap": {
-      "./migration/1611596054792-migration.ts": [
-        "./node_modules/typeorm/index.d.ts"
-      ],
-      "./migration/1611596870565-migration.ts": [
-        "./node_modules/typeorm/index.d.ts"
-      ],
-      "./migration/1611608591696-migration.ts": [
-        "./node_modules/typeorm/index.d.ts"
-      ],
-      "./migration/1611990113471-migration.ts": [
+      "./migration/1612159533175-migration.ts": [
         "./node_modules/typeorm/index.d.ts"
       ],
       "./node_modules/@babel/parser/typings/babel-parser.d.ts": [
@@ -11484,6 +11454,10 @@
         "./src/modules/dashboard/services/budgets/budgets.service.ts",
         "./src/modules/dashboard/services/category-template/category-template.service.ts"
       ],
+      "./src/modules/dashboard/entities/budget-month.entity.ts": [
+        "./src/modules/dashboard/entities/budget.entity.ts",
+        "./src/modules/dashboard/entities/category-template.entity.ts"
+      ],
       "./src/modules/dashboard/entities/budget.entity.ts": [
         "./src/modules/auth/entities/user.entity.ts",
         "./src/modules/dashboard/entities/budget-month.entity.ts",
@@ -11491,6 +11465,7 @@
       ],
       "./src/modules/dashboard/entities/category-template.entity.ts": [
         "./src/modules/auth/entities/user.entity.ts",
+        "./src/modules/dashboard/entities/budget-month.entity.ts",
         "./src/modules/dashboard/entities/category.entity.ts"
       ],
       "./src/modules/dashboard/entities/category.entity.ts": [
@@ -11556,10 +11531,7 @@
       ]
     },
     "semanticDiagnosticsPerFile": [
-      "./migration/1611596054792-migration.ts",
-      "./migration/1611596870565-migration.ts",
-      "./migration/1611608591696-migration.ts",
-      "./migration/1611990113471-migration.ts",
+      "./migration/1612159533175-migration.ts",
       "./node_modules/@babel/parser/typings/babel-parser.d.ts",
       "./node_modules/@babel/types/lib/index.d.ts",
       "./node_modules/@nestjs/common/cache/cache.constants.d.ts",

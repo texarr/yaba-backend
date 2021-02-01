@@ -13,8 +13,8 @@ import { BudgetMonthEntity } from './budget-month.entity';
 
 @Entity()
 export class CategoryTemplateEntity {
-  @PrimaryGeneratedColumn()
-  templateId: string;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @ApiModelProperty()
   @Column()
